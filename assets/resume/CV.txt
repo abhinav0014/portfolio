@@ -1,0 +1,253 @@
+﻿Abhinav Gyawali
+
+
+Student | Aspiring Software Developer | Tech Enthusiast
+
+
+Location: Butwal, Nepal
+Phone: 9746940145
+Email: agyawali78@gmail.com
+GitHub: github.com/Abhinav-Gyawali
+Portfolio: abhinav-gyawali.com.np
+
+
+
+
+Professional Summary
+
+
+I am a science student with a strong inclination toward programming, system-level understanding, and practical problem solving. I enjoy building things that solve real issues, experimenting with ideas that combine software and hardware, and working collaboratively with people who value learning and impact.
+
+
+My interests lie in software development, automation concepts, and applied technology. I am currently seeking remote or part-time opportunities, internships, NGO roles, or freelance work where I can contribute meaningfully while continuing to learn through hands-on experience.
+
+
+
+
+Education
+
+
+Higher Secondary Education (+2 Science, PCMB)
+
+
+Tilottama Secondary School, Butwal
+2023 – Present
+Currently studying Physics, Chemistry, Mathematics, and Biology, with a strong interest in applying scientific concepts through technology and experimentation.
+
+
+
+
+Secondary Education (SEE)
+
+
+Shree Hemraj Secondary School, Hathausa, Kapilvastu
+GPA: 3.75
+Maintained academic excellence and was consistently recognized for curiosity, practical thinking, and engagement beyond textbooks.
+
+
+
+
+Basic Level Examination (BLE)
+
+
+Evergreen English Boarding Secondary School, Barawa, Kapilvastu
+GPA: 3.92
+Demonstrated early academic consistency and interest in logical and scientific subjects.
+
+
+
+
+Technical Skills
+
+
+Programming Languages
+* Python
+* JavaScript
+* Basic knowledge of Java, C, and C++
+
+
+
+
+Frameworks & Libraries
+* React
+* Next.js
+* Django
+* Flask
+* FastAPI
+
+
+
+
+Platforms & Environments
+* Linux (Ubuntu, Fedora)
+* Android
+* Windows
+
+
+
+
+Tools & Utilities
+* Android Studio
+* Termux
+* Git
+* Canva
+
+
+
+
+Core Technical Concepts
+* API integration and usage
+* Computer networking fundamentals (IP addressing, MAC, DNS, routing, filtering)
+* Understanding of system behavior across software and hardware layers
+
+
+
+
+Projects
+
+
+TprGng
+
+
+A collaborative academic support platform
+
+
+TprGng is a student-focused platform inspired by the idea of Stack Overflow but tailored for academic environments. It aims to allow students and teachers to ask questions, share notes, and collaborate on learning materials in an organized and accessible way.
+
+
+Key focus areas:
+* Peer-to-peer learning
+* Knowledge sharing
+* Academic collaboration
+
+
+Status: Conceptual and exploratory (vision-driven)
+
+
+
+
+InTouch
+
+
+Location-aware device automation system
+
+
+InTouch is a conceptual automation project designed to control device behavior based on location and context. Using sensors, geofencing, and peer-based connections, the system can automatically switch devices to silent, vibrate, or specific volume levels in places like libraries or meeting halls.
+
+
+It also includes manual configuration, allowing users to “teach” the system how devices should behave in different areas.
+
+
+Core ideas:
+* Context-aware automation
+* Practical use of sensors and geofencing
+* Peer-based interaction and control
+
+
+
+
+Status: Visionary / experimental
+
+
+
+
+School Management Website
+
+
+Freelance project (currently on hold)
+
+
+A full-stack school website built to manage notices, events, academic calendars, and student admissions. The system includes an admin panel and a structured admission workflow where submitted forms receive priority handling.
+
+
+Technologies used:
+* Django
+* HTML
+* Tailwind CSS
+* SQLite (development)
+* PostgreSQL (planned for production)
+
+
+Status: Technically complete, not deployed due to external constraints
+
+
+
+
+Leadership & Training
+
+
+Participated in three leadership and anchoring development trainings conducted at ward and municipality levels
+
+
+Gained experience in public speaking, coordination, and group facilitation
+
+
+Assisted in organizing and managing school-level events
+
+
+
+
+Achievements & Recognition
+
+
+Received scholarships at multiple schools for academic excellence
+
+
+Recognized by teachers for curiosity, practical understanding, and active participation
+
+
+Known for asking questions beyond syllabus requirements and exploring real-world applications
+
+
+
+
+Soft Skills
+
+
+Clear and effective communication in English (spoken and written)
+
+
+Fluent Nepali speaker
+
+
+Strong inclination toward teaching and mentoring peers
+
+
+Collaborative leadership style with emphasis on inclusiveness
+
+
+Comfortable working in group environments and guiding discussions
+
+
+
+
+Interests
+
+
+Technical
+* Software development and system design
+* Hardware assembly and troubleshooting
+* Networking setup and experimentation
+* Applied laboratory experiments
+
+
+Non-Technical
+* Cricket
+* Volleyball
+
+
+
+
+Personal Traits
+
+
+Highly curious and eager to learn across disciplines
+
+
+Idea-driven and confident in conceptual thinking
+
+
+Strong work ethic in team environments
+
+
+Sometimes impatient and fast-paced, actively working on improving patience and execution balance
