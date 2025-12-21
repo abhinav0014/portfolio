@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://abhinav-gyawali.com.np/sitemap.xml
+
+Disallow: /assets/
+Disallow: /css/
+Disallow: /js/
