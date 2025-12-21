@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - ABSTER</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="grid-overlay"></div>
+
+    <nav>
+        <a href="/" class="logo">
+            <div class="logo-icon">AB</div>
+            <span>ABSTER</span>
+        </a>
+        
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" class="hamburger">
+            <img src="assets/icons/menu.svg" alt="Menu" style="width: 24px; height: 24px;">
+        </label>
+        
+        <ul class="nav-links">
+            <li><a href="/"><img src="assets/icons/home.svg" alt="" class="nav-icon">Home</a></li>
+            <li><a href="/about"><img src="assets/icons/user.svg" alt="" class="nav-icon">About</a></li>
+            <li><a href="/projects"><img src="assets/icons/folder.svg" alt="" class="nav-icon">Projects</a></li>
+            <li><a href="/contact"><img src="assets/icons/mail.svg" alt="" class="nav-icon">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="badge">Blog & Insights</div>
+                <h1 class="page-title">Thoughts & Ideas</h1>
+                <p class="page-subtitle">Exploring technology, design, and development</p>
+            </div>
+        </section>
+
+        <section class="blog-section">
+            <div class="container">
+                <!-- Search and Filter -->
+                <div class="blog-header">
+                    <div class="search-box">
+                        <img src="assets/icons/search.svg" alt="" class="search-icon">
+                        <input type="text" placeholder="Search articles...">
+                    </div>
+                    <div class="blog-categories">
+                        <button class="category-btn active" data-category="all">All</button>
+                        <button class="category-btn" data-category="web">Web Dev</button>
+                        <button class="category-btn" data-category="design">Design</button>
+                        <button class="category-btn" data-category="tutorial">Tutorial</button>
+                    </div>
+                </div>
+
+                <!-- Featured Post -->
+                <div class="featured-post">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=600&fit=crop" alt="Featured">
+                        <div class="featured-badge">Featured</div>
+                    </div>
+                    <div class="featured-content">
+                        <div class="post-meta">
+                            <span class="post-category">
+                                <img src="assets/icons/tag.svg" alt="">
+                                Web Development
+                            </span>
+                            <span class="post-date">
+                                <img src="assets/icons/calendar.svg" alt="">
+                                Dec 15, 2024
+                            </span>
+                            <span class="post-time">
+                                <img src="assets/icons/clock.svg" alt="">
+                                8 min read
+                            </span>
+                        </div>
+                        <h2>Building Scalable Web Applications with Modern Architecture</h2>
+                        <p>Explore best practices for creating maintainable and scalable web applications using modern frameworks and design patterns.</p>
+                        <a href="#" class="read-more">
+                            Read Article
+                            <img src="assets/icons/arrow-right.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Blog Grid -->
+                <div class="blog-grid">
+                    <article class="blog-card" data-category="design">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=500&fit=crop" alt="Blog">
+                            <div class="blog-overlay"></div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span class="post-category">
+                                    <img src="assets/icons/tag.svg" alt="">
+                                    Design
+                                </span>
+                                <span class="post-date">
+                                    <img src="assets/icons/calendar.svg" alt="">
+                                    Dec 12, 2024
+                                </span>
+                            </div>
+                            <h3>The Art of Minimalist UI Design</h3>
+                            <p>Discover how less can be more when it comes to creating beautiful and functional user interfaces.</p>
+                            <div class="blog-footer">
+                                <div class="author">
+                                    <img src="https://i.pravatar.cc/40?img=12" alt="Author" class="author-avatar">
+                                    <span>Abhinav</span>
+                                </div>
+                                <a href="#" class="read-link">
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="web">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop" alt="Blog">
+                            <div class="blog-overlay"></div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span class="post-category">
+                                    <img src="assets/icons/tag.svg" alt="">
+                                    Web Dev
+                                </span>
+                                <span class="post-date">
+                                    <img src="assets/icons/calendar.svg" alt="">
+                                    Dec 10, 2024
+                                </span>
+                            </div>
+                            <h3>Introduction to React Server Components</h3>
+                            <p>Learn about the future of React and how server components can improve your application performance.</p>
+                            <div class="blog-footer">
+                                <div class="author">
+                                    <img src="https://i.pravatar.cc/40?img=12" alt="Author" class="author-avatar">
+                                    <span>Abhinav</span>
+                                </div>
+                                <a href="#" class="read-link">
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="tutorial">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop" alt="Blog">
+                            <div class="blog-overlay"></div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span class="post-category">
+                                    <img src="assets/icons/tag.svg" alt="">
+                                    Tutorial
+                                </span>
+                                <span class="post-date">
+                                    <img src="assets/icons/calendar.svg" alt="">
+                                    Dec 8, 2024
+                                </span>
+                            </div>
+                            <h3>Mastering CSS Grid Layouts</h3>
+                            <p>A comprehensive guide to creating responsive and flexible layouts using CSS Grid.</p>
+                            <div class="blog-footer">
+                                <div class="author">
+                                    <img src="https://i.pravatar.cc/40?img=12" alt="Author" class="author-avatar">
+                                    <span>Abhinav</span>
+                                </div>
+                                <a href="#" class="read-link">
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="web">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=500&fit=crop" alt="Blog">
+                            <div class="blog-overlay"></div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span class="post-category">
+                                    <img src="assets/icons/tag.svg" alt="">
+                                    Web Dev
+                                </span>
+                                <span class="post-date">
+                                    <img src="assets/icons/calendar.svg" alt="">
+                                    Dec 5, 2024
+                                </span>
+                            </div>
+                            <h3>API Design Best Practices</h3>
+                            <p>Essential guidelines for designing robust and developer-friendly REST APIs.</p>
+                            <div class="blog-footer">
+                                <div class="author">
+                                    <img src="https://i.pravatar.cc/40?img=12" alt="Author" class="author-avatar">
+                                    <span>Abhinav</span>
+                                </div>
+                                <a href="#" class="read-link">
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="design">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=500&fit=crop" alt="Blog">
+                            <div class="blog-overlay"></div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span class="post-category">
+                                    <img src="assets/icons/tag.svg" alt="">
+                                    Design
+                                </span>
+                                <span class="post-date">
+                                    <img src="assets/icons/calendar.svg" alt="">
+                                    Dec 3, 2024
+                                </span>
+                            </div>
+                            <h3>Color Theory for Developers</h3>
+                            <p>Understanding color psychology and how to create harmonious color palettes for your projects.</p>
+                            <div class="blog-footer">
+                                <div class="author">
+                                    <img src="https://i.pravatar.cc/40?img=12" alt="Author" class="author-avatar">
+                                    <span>Abhinav</span>
+                                </div>
+                                <a href="#" class="read-link">
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="tutorial">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&h=500&fit=crop" alt="Blog">
+                            <div class="blog-overlay"></div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span class="post-category">
+                                    <img src="assets/icons/tag.svg" alt="">
+                                    Tutorial
+                                </span>
+                                <span class="post-date">
+                                    <img src="assets/icons/calendar.svg" alt="">
+                                    Dec 1, 2024
+                                </span>
+                            </div>
+                            <h3>Git Workflow for Teams</h3>
+                            <p>Learn effective Git strategies for collaborating with your team and managing code.</p>
+                            <div class="blog-footer">
+                                <div class="author">
+                                    <img src="https://i.pravatar.cc/40?img=12" alt="Author" class="author-avatar">
+                                    <span>Abhinav</span>
+                                </div>
+                                <a href="#" class="read-link">
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Newsletter Section -->
+                <div class="newsletter-section">
+                    <div class="newsletter-content">
+                        <img src="assets/icons/mail.svg" alt="" class="newsletter-icon">
+                        <h2>Subscribe to Newsletter</h2>
+                        <p>Get the latest articles and insights delivered to your inbox weekly</p>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="button primary">
+                            Subscribe
+                            <img src="assets/icons/send.svg" alt="">
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>ABSTER</h3>
+                <p>Transforming ideas into elegant digital experiences. Let's build something extraordinary together.</p>
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" class="social-icon">
+                        <img src="assets/icons/github.svg" alt="GitHub">
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon">
+                        <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon">
+                        <img src="assets/icons/twitter.svg" alt="Twitter">
+                    </a>
+                    <a href="mailto:hello@abhister.com" class="social-icon">
+                        <img src="assets/icons/mail.svg" alt="Email">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/"><img src="assets/icons/home.svg" alt="" class="footer-icon">Home</a></li>
+                    <li><a href="/about"><img src="assets/icons/user.svg" alt="" class="footer-icon">About</a></li>
+                    <li><a href="/projects"><img src="assets/icons/folder.svg" alt="" class="footer-icon">Projects</a></li>
+                    <li><a href="/contact"><img src="assets/icons/mail.svg" alt="" class="footer-icon">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/blog"><img src="assets/icons/book.svg" alt="" class="footer-icon">Blog</a></li>
+                    <li><a href="/archives"><img src="assets/icons/archive.svg" alt="" class="footer-icon">Archives</a></li>
+                    <li><a href="/resume"><img src="assets/icons/document.svg" alt="" class="footer-icon">Resume</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:hello@abhister.com"><img src="assets/icons/mail.svg" alt="" class="footer-icon">Email</a></li>
+                    <li><a href="https://github.com"><img src="assets/icons/github.svg" alt="" class="footer-icon">GitHub</a></li>
+                    <li><a href="https://linkedin.com"><img src="assets/icons/linkedin.svg" alt="" class="footer-icon">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 ABSTER. Crafted with passion.</p>
+            <div class="footer-links">
+                <a href="/privacy">Privacy</a>
+                <a href="/terms">Terms</a>
+                <a href="/sitemap">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

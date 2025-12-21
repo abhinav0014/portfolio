@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - ABHISTER</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="grid-overlay"></div>
+
+    <nav>
+        <a href="/" class="logo">
+            <div class="logo-icon">AB</div>
+            <span>ABHISTER</span>
+        </a>
+        
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" class="hamburger">
+            <img src="assets/icons/menu.svg" alt="Menu" style="width: 24px; height: 24px;">
+        </label>
+        
+        <ul class="nav-links">
+            <li><a href="/"><img src="assets/icons/home.svg" alt="" class="nav-icon">Home</a></li>
+            <li><a href="/about"><img src="assets/icons/user.svg" alt="" class="nav-icon">About</a></li>
+            <li><a href="/projects" class="active"><img src="assets/icons/folder.svg" alt="" class="nav-icon">Projects</a></li>
+            <li><a href="/contact"><img src="assets/icons/mail.svg" alt="" class="nav-icon">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="badge">Portfolio</div>
+                <h1 class="page-title">Featured Projects</h1>
+                <p class="page-subtitle">Explore my latest work in web development, mobile apps, and design</p>
+            </div>
+        </section>
+
+        <section class="projects-showcase-section">
+            <div class="container">
+                <!-- Filter -->
+                <div class="showcase-filter">
+                    <button class="showcase-filter-btn active" data-filter="all">All Projects</button>
+                    <button class="showcase-filter-btn" data-filter="web">Web Development</button>
+                    <button class="showcase-filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="showcase-filter-btn" data-filter="design">UI/UX Design</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="showcase-grid">
+                    <!-- Project 1 - Featured -->
+                    <article class="showcase-card featured" data-category="web">
+                        <div class="showcase-badge">Featured Project</div>
+                        <div class="showcase-image">
+                            <img src="assets/projects/ecommerce-platform.svg" alt="E-Commerce Platform">
+                            <div class="showcase-overlay">
+                                <div class="showcase-overlay-content">
+                                    <a href="#" class="showcase-btn">
+                                        <img src="assets/icons/external-link.svg" alt="">
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="#" class="showcase-btn">
+                                        <img src="assets/icons/github.svg" alt="">
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-header">
+                                <h3>E-Commerce Platform</h3>
+                                <div class="showcase-year">2024</div>
+                            </div>
+                            <p class="showcase-description">
+                                A full-stack e-commerce solution with payment integration, inventory management, and real-time analytics. Built with modern technologies for optimal performance.
+                            </p>
+                            <div class="showcase-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Stripe</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                            <div class="showcase-meta">
+                                <div class="meta-item">
+                                    <img src="assets/icons/star.svg" alt="">
+                                    <span>156 Stars</span>
+                                </div>
+                                <div class="meta-item">
+                                    <img src="assets/icons/code.svg" alt="">
+                                    <span>Open Source</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="showcase-card" data-category="mobile">
+                        <div class="showcase-image">
+                            <img src="assets/projects/fitness-tracker.svg" alt="Fitness Tracking App">
+                            <div class="showcase-overlay">
+                                <div class="showcase-overlay-content">
+                                    <a href="#" class="showcase-btn">
+                                        <img src="assets/icons/external-link.svg" alt="">
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="#" class="showcase-btn">
+                                        <img src="assets/icons/github.svg" alt="">
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-header">
+                                <h3>Fitness Tracker Pro</h3>
+                                <div class="showcase-year">2024</div>
+                            </div>
+                            <p class="showcase-description">
+                                Mobile fitness app with workout tracking, goal setting, and progress analytics. Features social sharing and community challenges.
+                            </p>
+                            <div class="showcase-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Redux</span>
+                            </div>
+                            <div class="showcase-meta">
+                                <div class="meta-item">
+                                    <img src="assets/icons/download.svg" alt="">
+                                    <span>10k+ Downloads</span>
+                                </div>
+                                <div class="meta-item">
+                                    <img src="assets/icons/star.svg" alt="">
+                                    <span>4.8/5 Rating</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="showcase-card" data-category="web">
+                        <div class="showcase-badge new">New</div>
+                        <div class="showcase-image">
+                            <img src="assets/projects/analytics-dashboard.svg" alt="Analytics Dashboard">
+                            <div class="showcase-overlay">
+                                <div class="showcase-overlay-content">
+                                    <a href="#" class="showcase-btn">
+                                        <img src="assets/icons/external-link.svg" alt="">
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="#" class="showcase-btn">
+                                        <img src="assets/icons/github.svg" alt="">
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-header">
+                                <h3>Analytics Dashboard</h3>
+                                <div class="showcase-year">2024</div>
+                            </div>
+                            <p class="showcase-description">
+                                Real-time data visualization dashboard with custom charts, reports generation, and team collaboration features.
+                            </p>
+                            <div class="showcase-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">D3.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                            <div class="showcase-meta">
+                                <div class="meta-item">
+                                    <img src="assets/icons/users.svg" alt="">
+                                    <span>5k+ Users</span>
+                                </div>
+                                <div class="meta-item">
+                                    <img src="assets/icons/chart.svg" alt="">
+                                    <span>Live Analytics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="showcase-card" data-category="design">
+                        <div class="showcase-image">
+                            <img src="assets/projects/design-system.svg" alt="Design System">
+                            <div class="showcase-overlay">
+                                <div class="showcase-overlay-content">
+                                    <a href="#" class="showcase-btn">
+                                        <img src="assets/icons/external-link.svg" alt="">
+                                        <span>View Project</span>
+                                    </a>
+                                    <a href="#" class="showcase-btn">
+                                        <img src="assets/icons/download.svg" alt="">
+                                        <span>Download</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-header">
+                                <h3>Modern Design System</h3>
+                                <div class="showcase-year">2023</div>
+                            </div>
+                            <p class="showcase-description">
+                                Comprehensive design system with 200+ components, style guide, and documentation for enterprise applications.
+                            </p>
+                            <div class="showcase-tech">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Storybook</span>
+                                <span class="tech-tag">Tailwind</span>
+                            </div>
+                            <div class="showcase-meta">
+                                <div class="meta-item">
+                                    <img src="assets/icons/design.svg" alt="">
+                                    <span>200+ Components</span>
+                                </div>
+                                <div class="meta-item">
+                                    <img src="assets/icons/download.svg" alt="">
+                                    <span>3k Downloads</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="showcase-card" data-category="web">
+                        <div class="showcase-image">
+                            <img src="assets/projects/social-platform.svg" alt="Social Media Platform">
+                            <div class="showcase-overlay">
+                                <div class="showcase-overlay-content">
+                                    <a href="#" class="showcase-btn">
+                                        <img src="assets/icons/external-link.svg" alt="">
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="#" class="showcase-btn">
+                                        <img src="assets/icons/github.svg" alt="">
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-header">
+                                <h3>Social Connect</h3>
+                                <div class="showcase-year">2023</div>
+                            </div>
+                            <p class="showcase-description">
+                                Full-featured social media platform with real-time messaging, posts, stories, and content discovery algorithms.
+                            </p>
+                            <div class="showcase-tech">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">GraphQL</span>
+                                <span class="tech-tag">WebSocket</span>
+                                <span class="tech-tag">Redis</span>
+                            </div>
+                            <div class="showcase-meta">
+                                <div class="meta-item">
+                                    <img src="assets/icons/users.svg" alt="">
+                                    <span>50k+ Users</span>
+                                </div>
+                                <div class="meta-item">
+                                    <img src="assets/icons/message.svg" alt="">
+                                    <span>Real-time Chat</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article class="showcase-card" data-category="mobile">
+                        <div class="showcase-image">
+                            <img src="assets/projects/recipe-app.svg" alt="Recipe App">
+                            <div class="showcase-overlay">
+                                <div class="showcase-overlay-content">
+                                    <a href="#" class="showcase-btn">
+                                        <img src="assets/icons/external-link.svg" alt="">
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="#" class="showcase-btn">
+                                        <img src="assets/icons/github.svg" alt="">
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-header">
+                                <h3>Recipe Master</h3>
+                                <div class="showcase-year">2023</div>
+                            </div>
+                            <p class="showcase-description">
+                                Smart recipe app with AI-powered meal planning, ingredient scanner, and cooking timer features.
+                            </p>
+                            <div class="showcase-tech">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Cloud Functions</span>
+                            </div>
+                            <div class="showcase-meta">
+                                <div class="meta-item">
+                                    <img src="assets/icons/download.svg" alt="">
+                                    <span>25k+ Downloads</span>
+                                </div>
+                                <div class="meta-item">
+                                    <img src="assets/icons/star.svg" alt="">
+                                    <span>4.9/5 Rating</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="projects-cta-section">
+                    <div class="cta-box">
+                        <img src="assets/icons/lightbulb.svg" alt="" class="cta-icon">
+                        <h2>Have a Project in Mind?</h2>
+                        <p>I'm always interested in hearing about new projects and opportunities. Let's create something amazing together!</p>
+                        <a href="/contact" class="button primary large">
+                            <img src="assets/icons/mail.svg" alt="">
+                            Start a Conversation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>ABHISTER</h3>
+                <p>Transforming ideas into elegant digital experiences. Let's build something extraordinary together.</p>
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" class="social-icon">
+                        <img src="assets/icons/github.svg" alt="GitHub">
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon">
+                        <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon">
+                        <img src="assets/icons/twitter.svg" alt="Twitter">
+                    </a>
+                    <a href="mailto:hello@abhister.com" class="social-icon">
+                        <img src="assets/icons/mail.svg" alt="Email">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/"><img src="assets/icons/home.svg" alt="" class="footer-icon">Home</a></li>
+                    <li><a href="/about"><img src="assets/icons/user.svg" alt="" class="footer-icon">About</a></li>
+                    <li><a href="/projects"><img src="assets/icons/folder.svg" alt="" class="footer-icon">Projects</a></li>
+                    <li><a href="/contact"><img src="assets/icons/mail.svg" alt="" class="footer-icon">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/blog"><img src="assets/icons/book.svg" alt="" class="footer-icon">Blog</a></li>
+                    <li><a href="/archives"><img src="assets/icons/archive.svg" alt="" class="footer-icon">Archives</a></li>
+                    <li><a href="/resume"><img src="assets/icons/document.svg" alt="" class="footer-icon">Resume</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:hello@abhister.com"><img src="assets/icons/mail.svg" alt="" class="footer-icon">Email</a></li>
+                    <li><a href="https://github.com"><img src="assets/icons/github.svg" alt="" class="footer-icon">GitHub</a></li>
+                    <li><a href="https://linkedin.com"><img src="assets/icons/linkedin.svg" alt="" class="footer-icon">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 ABHISTER. Crafted with passion.</p>
+            <div class="footer-links">
+                <a href="/privacy">Privacy</a>
+                <a href="/terms">Terms</a>
+                <a href="/sitemap">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

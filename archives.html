@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archives - ABSTER</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="grid-overlay"></div>
+
+    <nav>
+        <a href="/" class="logo">
+            <div class="logo-icon">AB</div>
+            <span>ABSTER</span>
+        </a>
+        
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" class="hamburger">
+            <img src="assets/icons/menu.svg" alt="Menu" style="width: 24px; height: 24px;">
+        </label>
+        
+        <ul class="nav-links">
+            <li><a href="/"><img src="assets/icons/home.svg" alt="" class="nav-icon">Home</a></li>
+            <li><a href="/about"><img src="assets/icons/user.svg" alt="" class="nav-icon">About</a></li>
+            <li><a href="/projects"><img src="assets/icons/folder.svg" alt="" class="nav-icon">Projects</a></li>
+            <li><a href="/contact"><img src="assets/icons/mail.svg" alt="" class="nav-icon">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="badge">Explore</div>
+                <h1 class="page-title">Archives</h1>
+                <p class="page-subtitle">Browse through past projects, articles, and work</p>
+            </div>
+        </section>
+
+        <section class="archives-section">
+            <div class="container">
+                <!-- Archive Stats -->
+                <div class="archive-stats">
+                    <div class="archive-stat-card">
+                        <img src="assets/icons/folder.svg" alt="">
+                        <div class="stat-content">
+                            <h3>24</h3>
+                            <p>Total Projects</p>
+                        </div>
+                    </div>
+                    <div class="archive-stat-card">
+                        <img src="assets/icons/book.svg" alt="">
+                        <div class="stat-content">
+                            <h3>48</h3>
+                            <p>Blog Articles</p>
+                        </div>
+                    </div>
+                    <div class="archive-stat-card">
+                        <img src="assets/icons/code.svg" alt="">
+                        <div class="stat-content">
+                            <h3>156</h3>
+                            <p>Code Commits</p>
+                        </div>
+                    </div>
+                    <div class="archive-stat-card">
+                        <img src="assets/icons/calendar.svg" alt="">
+                        <div class="stat-content">
+                            <h3>3+</h3>
+                            <p>Years Active</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter Bar -->
+                <div class="archive-filter-bar">
+                    <div class="filter-group">
+                        <label>Year:</label>
+                        <select class="filter-select">
+                            <option value="all">All Years</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Category:</label>
+                        <select class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="projects">Projects</option>
+                            <option value="articles">Articles</option>
+                            <option value="tutorials">Tutorials</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Sort By:</label>
+                        <select class="filter-select">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Archive Timeline -->
+                <div class="archive-timeline">
+                    <!-- 2024 -->
+                    <div class="archive-year-section">
+                        <div class="year-header">
+                            <h2>2024</h2>
+                            <span class="year-count">12 items</span>
+                        </div>
+
+                        <div class="archive-grid">
+                            <div class="archive-item" data-category="projects">
+                                <div class="archive-item-header">
+                                    <div class="archive-icon">
+                                        <img src="assets/icons/folder.svg" alt="">
+                                    </div>
+                                    <span class="archive-date">Dec 2024</span>
+                                </div>
+                                <h3>E-Commerce Platform Launch</h3>
+                                <p>Launched a full-featured e-commerce platform with payment integration and real-time analytics.</p>
+                                <div class="archive-tags">
+                                    <span class="archive-tag">React</span>
+                                    <span class="archive-tag">Node.js</span>
+                                    <span class="archive-tag">MongoDB</span>
+                                </div>
+                                <a href="/projects/ecommerce" class="archive-link">
+                                    View Project
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="archive-item" data-category="articles">
+                                <div class="archive-item-header">
+                                    <div class="archive-icon">
+                                        <img src="assets/icons/book.svg" alt="">
+                                    </div>
+                                    <span class="archive-date">Nov 2024</span>
+                                </div>
+                                <h3>Modern Web Development Best Practices</h3>
+                                <p>A comprehensive guide to building scalable web applications with modern frameworks.</p>
+                                <div class="archive-tags">
+                                    <span class="archive-tag">Tutorial</span>
+                                    <span class="archive-tag">Web Dev</span>
+                                </div>
+                                <a href="/blog/web-dev-practices" class="archive-link">
+                                    Read Article
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="archive-item" data-category="projects">
+                                <div class="archive-item-header">
+                                    <div class="archive-icon">
+                                        <img src="assets/icons/folder.svg" alt="">
+                                    </div>
+                                    <span class="archive-date">Oct 2024</span>
+                                </div>
+                                <h3>Analytics Dashboard Pro</h3>
+                                <p>Real-time data visualization dashboard with custom reports and team collaboration.</p>
+                                <div class="archive-tags">
+                                    <span class="archive-tag">Vue.js</span>
+                                    <span class="archive-tag">D3.js</span>
+                                </div>
+                                <a href="/projects/analytics" class="archive-link">
+                                    View Project
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="archive-item" data-category="tutorials">
+                                <div class="archive-item-header">
+                                    <div class="archive-icon">
+                                        <img src="assets/icons/code.svg" alt="">
+                                    </div>
+                                    <span class="archive-date">Sep 2024</span>
+                                </div>
+                                <h3>React Hooks Deep Dive</h3>
+                                <p>Understanding advanced React Hooks patterns and custom hook creation.</p>
+                                <div class="archive-tags">
+                                    <span class="archive-tag">React</span>
+                                    <span class="archive-tag">JavaScript</span>
+                                </div>
+                                <a href="/blog/react-hooks" class="archive-link">
+                                    Read Tutorial
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div class="archive-year-section">
+                        <div class="year-header">
+                            <h2>2023</h2>
+                            <span class="year-count">16 items</span>
+                        </div>
+
+                        <div class="archive-grid">
+                            <div class="archive-item" data-category="projects">
+                                <div class="archive-item-header">
+                                    <div class="archive-icon">
+                                        <img src="assets/icons/folder.svg" alt="">
+                                    </div>
+                                    <span class="archive-date">Dec 2023</span>
+                                </div>
+                                <h3>Social Media Platform</h3>
+                                <p>Full-featured social platform with real-time messaging and content discovery.</p>
+                                <div class="archive-tags">
+                                    <span class="archive-tag">Next.js</span>
+                                    <span class="archive-tag">GraphQL</span>
+                                </div>
+                                <a href="/projects/social-platform" class="archive-link">
+                                    View Project
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="archive-item" data-category="articles">
+                                <div class="archive-item-header">
+                                    <div class="archive-icon">
+                                        <img src="assets/icons/book.svg" alt="">
+                                    </div>
+                                    <span class="archive-date">Nov 2023</span>
+                                </div>
+                                <h3>Understanding System Design</h3>
+                                <p>Key concepts and patterns for designing scalable distributed systems.</p>
+                                <div class="archive-tags">
+                                    <span class="archive-tag">System Design</span>
+                                    <span class="archive-tag">Architecture</span>
+                                </div>
+                                <a href="/blog/system-design" class="archive-link">
+                                    Read Article
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="archive-item" data-category="projects">
+                                <div class="archive-item-header">
+                                    <div class="archive-icon">
+                                        <img src="assets/icons/folder.svg" alt="">
+                                    </div>
+                                    <span class="archive-date">Sep 2023</span>
+                                </div>
+                                <h3>School Management System</h3>
+                                <p>Complete school management system with admin panel and admission workflow.</p>
+                                <div class="archive-tags">
+                                    <span class="archive-tag">Django</span>
+                                    <span class="archive-tag">PostgreSQL</span>
+                                </div>
+                                <a href="/projects/school-management" class="archive-link">
+                                    View Project
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="archive-item" data-category="tutorials">
+                                <div class="archive-item-header">
+                                    <div class="archive-icon">
+                                        <img src="assets/icons/code.svg" alt="">
+                                    </div>
+                                    <span class="archive-date">Aug 2023</span>
+                                </div>
+                                <h3>Python for Automation</h3>
+                                <p>Automating daily tasks with Python scripts and practical examples.</p>
+                                <div class="archive-tags">
+                                    <span class="archive-tag">Python</span>
+                                    <span class="archive-tag">Automation</span>
+                                </div>
+                                <a href="/blog/python-automation" class="archive-link">
+                                    Read Tutorial
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2022 -->
+                    <div class="archive-year-section">
+                        <div class="year-header">
+                            <h2>2022</h2>
+                            <span class="year-count">8 items</span>
+                        </div>
+
+                        <div class="archive-grid">
+                            <div class="archive-item" data-category="projects">
+                                <div class="archive-item-header">
+                                    <div class="archive-icon">
+                                        <img src="assets/icons/folder.svg" alt="">
+                                    </div>
+                                    <span class="archive-date">Oct 2022</span>
+                                </div>
+                                <h3>Portfolio Website V1</h3>
+                                <p>First version of my personal portfolio website with project showcase.</p>
+                                <div class="archive-tags">
+                                    <span class="archive-tag">HTML</span>
+                                    <span class="archive-tag">CSS</span>
+                                    <span class="archive-tag">JavaScript</span>
+                                </div>
+                                <a href="/projects/portfolio-v1" class="archive-link">
+                                    View Project
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="archive-item" data-category="articles">
+                                <div class="archive-item-header">
+                                    <div class="archive-icon">
+                                        <img src="assets/icons/book.svg" alt="">
+                                    </div>
+                                    <span class="archive-date">Jul 2022</span>
+                                </div>
+                                <h3>Getting Started with Web Development</h3>
+                                <p>A beginner's guide to starting your journey in web development.</p>
+                                <div class="archive-tags">
+                                    <span class="archive-tag">Beginner</span>
+                                    <span class="archive-tag">Guide</span>
+                                </div>
+                                <a href="/blog/getting-started" class="archive-link">
+                                    Read Article
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="archive-item" data-category="projects">
+                                <div class="archive-item-header">
+                                    <div class="archive-icon">
+                                        <img src="assets/icons/folder.svg" alt="">
+                                    </div>
+                                    <span class="archive-date">May 2022</span>
+                                </div>
+                                <h3>Weather App</h3>
+                                <p>Simple weather application using OpenWeather API with location detection.</p>
+                                <div class="archive-tags">
+                                    <span class="archive-tag">JavaScript</span>
+                                    <span class="archive-tag">API</span>
+                                </div>
+                                <a href="/projects/weather-app" class="archive-link">
+                                    View Project
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="archive-item" data-category="tutorials">
+                                <div class="archive-item-header">
+                                    <div class="archive-icon">
+                                        <img src="assets/icons/code.svg" alt="">
+                                    </div>
+                                    <span class="archive-date">Mar 2022</span>
+                                </div>
+                                <h3>CSS Grid Layout Mastery</h3>
+                                <p>Complete guide to creating responsive layouts using CSS Grid.</p>
+                                <div class="archive-tags">
+                                    <span class="archive-tag">CSS</span>
+                                    <span class="archive-tag">Layout</span>
+                                </div>
+                                <a href="/blog/css-grid" class="archive-link">
+                                    Read Tutorial
+                                    <img src="assets/icons/arrow-right.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More -->
+                <div class="load-more-section">
+                    <button class="button secondary load-more-btn">
+                        <img src="assets/icons/download.svg" alt="">
+                        Load More Archives
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>ABSTER</h3>
+                <p>Transforming ideas into elegant digital experiences. Let's build something extraordinary together.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Abhinav-Gyawali/" target="_blank" class="social-icon">
+                        <img src="assets/icons/github.svg" alt="GitHub">
+                    </a>
+                    <a href="https://linkedin.com/abhinav.gyawali07" target="_blank" class="social-icon">
+                        <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://twitter.com/abhinav.gyawali07" target="_blank" class="social-icon">
+                        <img src="assets/icons/twitter.svg" alt="Twitter">
+                    </a>
+                    <a href="mailto:contact@abhinav-gyawali.com.np" class="social-icon">
+                        <img src="assets/icons/mail.svg" alt="Email">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/"><img src="assets/icons/home.svg" alt="" class="footer-icon">Home</a></li>
+                    <li><a href="/about"><img src="assets/icons/user.svg" alt="" class="footer-icon">About</a></li>
+                    <li><a href="/projects"><img src="assets/icons/folder.svg" alt="" class="footer-icon">Projects</a></li>
+                    <li><a href="/contact"><img src="assets/icons/mail.svg" alt="" class="footer-icon">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/blog"><img src="assets/icons/book.svg" alt="" class="footer-icon">Blog</a></li>
+                    <li><a href="/archives"><img src="assets/icons/archive.svg" alt="" class="footer-icon">Archives</a></li>
+                    <li><a href="/resume"><img src="assets/icons/file-text.svg" alt="" class="footer-icon">Resume</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:contact@abhinav-gyawali.com.np"><img src="assets/icons/mail.svg" alt="" class="footer-icon">Email</a></li>
+                    <li><a href="https://github.com/Abhinav-Gyawali/"><img src="assets/icons/github.svg" alt="" class="footer-icon">GitHub</a></li>
+                    <li><a href="https://linkedin.com/abhinav.gyawali07"><img src="assets/icons/linkedin.svg" alt="" class="footer-icon">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 ABSTER. Crafted with passion.</p>
+            <div class="footer-links">
+                <a href="/privacy">Privacy</a>
+                <a href="/terms">Terms</a>
+                <a href="/sitemap">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
