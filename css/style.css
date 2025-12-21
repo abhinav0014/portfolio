@@ -1410,7 +1410,7 @@ footer {
     filter: brightness(0) saturate(100%) invert(40%) sepia(86%) saturate(3107%) hue-rotate(232deg) brightness(97%) contrast(94%);
 }
 
-.showcase-content {
+.showcase-card {
     padding: 30px;
 }
 
@@ -1556,11 +1556,6 @@ footer {
     padding: 18px 40px;
     font-size: 1.1rem;
 }
-
-/* ================================
-   PRODUCTS PAGE STYLES (REMOVED)
-   ================================ */
-
 
 
 /* ================================
@@ -2009,7 +2004,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .showcase-content {
+    .showcase-card {
         padding: 20px;
     }
 
