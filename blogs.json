@@ -4,7 +4,7 @@
     "author": "Abhinav Gyawali"
   },
   "posts": [
-    /*
+    
     {
       "id": "scalable-web-architecture",
       "title": "Building Scalable Web Applications with Modern Architecture",
@@ -78,7 +78,7 @@
       },
 
       "tags": ["css", "layout", "frontend"]
-    },*/
+    },
     {
   "id": "student-developer-guide",
   "title": "How a Class 12 Student Can Learn Software Development with Free Tools",
@@ -97,8 +97,8 @@
 
   "views": 2500,
 
-  "coverImage": "https://abhinav-gyawali.com.np/assets/blog/student-developer-guide.jpg",
-  "thumbnail": "https://abhinav-gyawali.com.np/assets/blog/student-developer-guide.jpg",
+  "coverImage": "/assets/blog/student-developer-guide.jpg",
+  "thumbnail": "/assets/blog/student-developer-guide.jpg",
 
   "author": {
     "name": "Abhinav Gyawali",

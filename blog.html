@@ -71,14 +71,14 @@
         
         <input type="checkbox" id="hamburger">
         <label for="hamburger" class="hamburger">
-            <img src="assets/icons/menu.svg" alt="Menu" style="width: 24px; height: 24px;">
+            <img src="/assets/icons/menu.svg" alt="Menu" style="width: 24px; height: 24px;">
         </label>
         
         <ul class="nav-links">
-            <li><a href="/"><img src="assets/icons/home.svg" alt="" class="nav-icon">Home</a></li>
-            <li><a href="/about"><img src="assets/icons/user.svg" alt="" class="nav-icon">About</a></li>
-            <li><a href="/projects"><img src="assets/icons/folder.svg" alt="" class="nav-icon">Projects</a></li>
-            <li><a href="/contact"><img src="assets/icons/mail.svg" alt="" class="nav-icon">Contact</a></li>
+            <li><a href="/"><img src="/assets/icons/home.svg" alt="" class="nav-icon">Home</a></li>
+            <li><a href="/about"><img src="/assets/icons/user.svg" alt="" class="nav-icon">About</a></li>
+            <li><a href="/projects"><img src="/assets/icons/folder.svg" alt="" class="nav-icon">Projects</a></li>
+            <li><a href="/contact"><img src="/assets/icons/mail.svg" alt="" class="nav-icon">Contact</a></li>
         </ul>
     </nav>
 
@@ -96,7 +96,7 @@
                 <!-- Search and Filter -->
                 <div class="blog-header">
                     <div class="search-box">
-                        <img src="assets/icons/search.svg" alt="" class="search-icon">
+                        <img src="/assets/icons/search.svg" alt="" class="search-icon">
                         <input type="text" placeholder="Search articles...">
                     </div>
                     <div class="blog-categories">
@@ -116,15 +116,15 @@
                     <div class="featured-content">
                         <div class="post-meta">
                             <span class="post-category">
-                                <img src="assets/icons/tag.svg" alt="">
+                                <img src="/assets/icons/tag.svg" alt="">
                                 Web Development
                             </span>
                             <span class="post-date">
-                                <img src="assets/icons/calendar.svg" alt="">
+                                <img src="/assets/icons/calendar.svg" alt="">
                                 Dec 15, 2024
                             </span>
                             <span class="post-time">
-                                <img src="assets/icons/clock.svg" alt="">
+                                <img src="/assets/icons/clock.svg" alt="">
                                 8 min read
                             </span>
                         </div>
@@ -132,7 +132,7 @@
                         <p>Explore best practices for creating maintainable and scalable web applications using modern frameworks and design patterns.</p>
                         <a href="#" class="read-more">
                             Read Article
-                            <img src="assets/icons/arrow-right.svg" alt="">
+                            <img src="/assets/icons/arrow-right.svg" alt="">
                         </a>
                     </div>
                 </div>
@@ -163,17 +163,17 @@ function renderFeatured() {
   document.querySelector(".featured-content .read-more").href = featured.contentUrl;
 
   document.querySelector(".post-category").innerHTML = `
-    <img src="assets/icons/tag.svg" alt="">
+    <img src="/assets/icons/tag.svg" alt="">
     ${featured.categoryLabel}
   `;
 
   document.querySelector(".post-date").innerHTML = `
-    <img src="assets/icons/calendar.svg" alt="">
+    <img src="/assets/icons/calendar.svg" alt="">
     ${formatDate(featured.publishedAt)}
   `;
 
   document.querySelector(".post-time").innerHTML = `
-    <img src="assets/icons/clock.svg" alt="">
+    <img src="/assets/icons/clock.svg" alt="">
     ${featured.readTime} min read
   `;
 }
@@ -191,11 +191,11 @@ function renderGrid(posts) {
       <div class="blog-content">
         <div class="post-meta">
           <span class="post-category">
-            <img src="assets/icons/tag.svg" alt="">
+            <img src="/assets/icons/tag.svg" alt="">
             ${post.categoryLabel}
           </span>
           <span class="post-date">
-            <img src="assets/icons/calendar.svg" alt="">
+            <img src="/assets/icons/calendar.svg" alt="">
             ${formatDate(post.publishedAt)}
           </span>
         </div>
@@ -209,7 +209,7 @@ function renderGrid(posts) {
             <span>${post.author.name}</span>
           </div>
           <a href="${post.contentUrl}" class="read-link">
-            <img src="assets/icons/arrow-right.svg" alt="">
+            <img src="/assets/icons/arrow-right.svg" alt="">
           </a>
         </div>
       </div>
@@ -260,7 +260,7 @@ function formatDate(date) {
                 <!-- Newsletter Section -->
                 <div class="newsletter-section">
                     <div class="newsletter-content">
-                        <img src="assets/icons/mail.svg" alt="" class="newsletter-icon">
+                        <img src="/assets/icons/mail.svg" alt="" class="newsletter-icon">
                         <h2>Subscribe to Newsletter</h2>
                         <p>Get the latest articles and insights delivered to your inbox weekly</p>
                     </div>
@@ -268,7 +268,7 @@ function formatDate(date) {
                         <input type="email" placeholder="Enter your email" required>
                         <button type="submit" class="button primary">
                             Subscribe
-                            <img src="assets/icons/send.svg" alt="">
+                            <img src="/assets/icons/send.svg" alt="">
                         </button>
                     </form>
                 </div>
@@ -283,16 +283,16 @@ function formatDate(date) {
                 <p>Transforming ideas into elegant digital experiences. Let's build something extraordinary together.</p>
                 <div class="social-links">
                     <a href="https://github.com" target="_blank" class="social-icon">
-                        <img src="assets/icons/github.svg" alt="GitHub">
+                        <img src="/assets/icons/github.svg" alt="GitHub">
                     </a>
                     <a href="https://linkedin.com" target="_blank" class="social-icon">
-                        <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+                        <img src="/assets/icons/linkedin.svg" alt="LinkedIn">
                     </a>
                     <a href="https://twitter.com" target="_blank" class="social-icon">
-                        <img src="assets/icons/twitter.svg" alt="Twitter">
+                        <img src="/assets/icons/twitter.svg" alt="Twitter">
                     </a>
                     <a href="mailto:hello@abhister.com" class="social-icon">
-                        <img src="assets/icons/mail.svg" alt="Email">
+                        <img src="/assets/icons/mail.svg" alt="Email">
                     </a>
                 </div>
             </div>
@@ -300,28 +300,28 @@ function formatDate(date) {
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="/"><img src="assets/icons/home.svg" alt="" class="footer-icon">Home</a></li>
-                    <li><a href="/about"><img src="assets/icons/user.svg" alt="" class="footer-icon">About</a></li>
-                    <li><a href="/projects"><img src="assets/icons/folder.svg" alt="" class="footer-icon">Projects</a></li>
-                    <li><a href="/contact"><img src="assets/icons/mail.svg" alt="" class="footer-icon">Contact</a></li>
+                    <li><a href="/"><img src="/assets/icons/home.svg" alt="" class="footer-icon">Home</a></li>
+                    <li><a href="/about"><img src="/assets/icons/user.svg" alt="" class="footer-icon">About</a></li>
+                    <li><a href="/projects"><img src="/assets/icons/folder.svg" alt="" class="footer-icon">Projects</a></li>
+                    <li><a href="/contact"><img src="/assets/icons/mail.svg" alt="" class="footer-icon">Contact</a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
                 <h4>Resources</h4>
                 <ul>
-                    <li><a href="/blog"><img src="assets/icons/book.svg" alt="" class="footer-icon">Blog</a></li>
-                    <li><a href="/archives"><img src="assets/icons/archive.svg" alt="" class="footer-icon">Archives</a></li>
-                    <li><a href="/resume"><img src="assets/icons/file-text.svg" alt="" class="footer-icon">Resume</a></li>
+                    <li><a href="/blog"><img src="/assets/icons/book.svg" alt="" class="footer-icon">Blog</a></li>
+                    <li><a href="/archives"><img src="/assets/icons/archive.svg" alt="" class="footer-icon">Archives</a></li>
+                    <li><a href="/resume"><img src="/assets/icons/file-text.svg" alt="" class="footer-icon">Resume</a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
                 <h4>Connect</h4>
                 <ul>
-                    <li><a href="mailto:hello@abhister.com"><img src="assets/icons/mail.svg" alt="" class="footer-icon">Email</a></li>
-                    <li><a href="https://github.com"><img src="assets/icons/github.svg" alt="" class="footer-icon">GitHub</a></li>
-                    <li><a href="https://linkedin.com"><img src="assets/icons/linkedin.svg" alt="" class="footer-icon">LinkedIn</a></li>
+                    <li><a href="mailto:hello@abhister.com"><img src="/assets/icons/mail.svg" alt="" class="footer-icon">Email</a></li>
+                    <li><a href="https://github.com"><img src="/assets/icons/github.svg" alt="" class="footer-icon">GitHub</a></li>
+                    <li><a href="https://linkedin.com"><img src="/assets/icons/linkedin.svg" alt="" class="footer-icon">LinkedIn</a></li>
                 </ul>
             </div>
         </div>
