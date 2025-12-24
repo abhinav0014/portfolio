@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "site": "ABSTER Blog",
+    "author": "Abhinav Gyawali"
+  },
+  "posts": [
+    /*
+    {
+      "id": "scalable-web-architecture",
+      "title": "Building Scalable Web Applications with Modern Architecture",
+      "excerpt": "Explore best practices for creating maintainable and scalable web applications using modern frameworks and design patterns.",
+      "contentUrl": "/blog/scalable-web-architecture",
+
+      "category": "web",
+      "categoryLabel": "Web Development",
+
+      "featured": true,
+      "trendingScore": 98,
+      "publishedAt": "2024-12-15",
+      "readTime": 8,
+
+      "coverImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=600&fit=crop",
+      "thumbnail": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=500&fit=crop",
+
+      "author": {
+        "name": "Abhinav",
+        "avatar": "https://i.pravatar.cc/40?img=12"
+      },
+
+      "tags": ["architecture", "scalability", "web"]
+    },
+
+    {
+      "id": "minimal-ui-design",
+      "title": "The Art of Minimalist UI Design",
+      "excerpt": "Discover how less can be more when it comes to creating beautiful and functional user interfaces.",
+      "contentUrl": "/blog/minimal-ui-design",
+
+      "category": "design",
+      "categoryLabel": "Design",
+
+      "featured": false,
+      "trendingScore": 72,
+      "publishedAt": "2024-12-12",
+      "readTime": 6,
+
+      "coverImage": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=600&fit=crop",
+      "thumbnail": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=500&fit=crop",
+
+      "author": {
+        "name": "Abhinav",
+        "avatar": "https://i.pravatar.cc/40?img=12"
+      },
+
+      "tags": ["ui", "ux", "design"]
+    },
+
+    {
+      "id": "css-grid-layouts",
+      "title": "Mastering CSS Grid Layouts",
+      "excerpt": "A comprehensive guide to creating responsive and flexible layouts using CSS Grid.",
+      "contentUrl": "/blog/css-grid-layouts",
+
+      "category": "tutorial",
+      "categoryLabel": "Tutorial",
+
+      "featured": false,
+      "trendingScore": 85,
+      "publishedAt": "2024-12-08",
+      "readTime": 10,
+
+      "coverImage": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop",
+      "thumbnail": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop",
+
+      "author": {
+        "name": "Abhinav",
+        "avatar": "https://i.pravatar.cc/40?img=12"
+      },
+
+      "tags": ["css", "layout", "frontend"]
+    },*/
+    {
+  "id": "student-developer-guide",
+  "title": "How a Class 12 Student Can Learn Software Development with Free Tools",
+  "excerpt": "A complete guide for high school students to learn software development using only free tools like Termux, GitHub, Django, React, and cloud platforms. Includes a real learning path, common mistakes, and practical tips.",
+  "contentUrl": "/blog/student-developer-guide.html",
+
+  "category": "tutorial",
+  "categoryLabel": "Tutorial",
+
+  "featured": true,
+  "trendingScore": 92,
+
+  "publishedAt": "2024-12-21",
+  "lastModified": "2024-12-21",
+  "readTime": 15,
+
+  "views": 2500,
+
+  "coverImage": "https://abhinav-gyawali.com.np/assets/blog/student-developer-guide.jpg",
+  "thumbnail": "https://abhinav-gyawali.com.np/assets/blog/student-developer-guide.jpg",
+
+  "author": {
+    "name": "Abhinav Gyawali",
+    "avatar": "/assets/images/abhinav-1.png"
+  },
+
+  "tags": [
+    "software development",
+    "student developer",
+    "free tools",
+    "termux",
+    "github",
+    "django",
+    "react",
+    "career",
+    "beginner"
+  ],
+
+  "seo": {
+    "metaTitle": "How a Class 12 Student Can Learn Software Development with Free Tools | ABSTER",
+    "metaDescription": "A complete guide for high school students to learn software development using free tools like Termux, GitHub, Django, React, and cloud platforms.",
+    "keywords": [
+      "software development",
+      "free learning",
+      "Termux",
+      "GitHub",
+      "Django",
+      "React",
+      "student developer",
+      "programming for students"
+    ],
+    "canonical": "https://abhinav-gyawali.com.np/blog/student-developer-guide.html",
+    "ogImage": "https://abhinav-gyawali.com.np/assets/blog/student-developer-guide.jpg"
+  }
+}
+  ]
+}

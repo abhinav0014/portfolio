@@ -138,187 +138,124 @@
                 </div>
 
                 <!-- Blog Grid -->
-                <div class="blog-grid">
-                    <article class="blog-card" data-category="design">
-                        <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=500&fit=crop" alt="Blog">
-                            <div class="blog-overlay"></div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="post-meta">
-                                <span class="post-category">
-                                    <img src="assets/icons/tag.svg" alt="">
-                                    Design
-                                </span>
-                                <span class="post-date">
-                                    <img src="assets/icons/calendar.svg" alt="">
-                                    Dec 12, 2024
-                                </span>
-                            </div>
-                            <h3>The Art of Minimalist UI Design</h3>
-                            <p>Discover how less can be more when it comes to creating beautiful and functional user interfaces.</p>
-                            <div class="blog-footer">
-                                <div class="author">
-                                    <img src="https://i.pravatar.cc/40?img=12" alt="Author" class="author-avatar">
-                                    <span>Abhinav</span>
-                                </div>
-                                <a href="#" class="read-link">
-                                    <img src="assets/icons/arrow-right.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </article>
+                <div class="blog-grid" id="blogGrid"></div>
+                <script>
+let allPosts = [];
 
-                    <article class="blog-card" data-category="web">
-                        <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop" alt="Blog">
-                            <div class="blog-overlay"></div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="post-meta">
-                                <span class="post-category">
-                                    <img src="assets/icons/tag.svg" alt="">
-                                    Web Dev
-                                </span>
-                                <span class="post-date">
-                                    <img src="assets/icons/calendar.svg" alt="">
-                                    Dec 10, 2024
-                                </span>
-                            </div>
-                            <h3>Introduction to React Server Components</h3>
-                            <p>Learn about the future of React and how server components can improve your application performance.</p>
-                            <div class="blog-footer">
-                                <div class="author">
-                                    <img src="https://i.pravatar.cc/40?img=12" alt="Author" class="author-avatar">
-                                    <span>Abhinav</span>
-                                </div>
-                                <a href="#" class="read-link">
-                                    <img src="assets/icons/arrow-right.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </article>
+fetch("blogs.json")
+  .then(res => res.json())
+  .then(data => {
+    allPosts = data.posts;
 
-                    <article class="blog-card" data-category="tutorial">
-                        <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop" alt="Blog">
-                            <div class="blog-overlay"></div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="post-meta">
-                                <span class="post-category">
-                                    <img src="assets/icons/tag.svg" alt="">
-                                    Tutorial
-                                </span>
-                                <span class="post-date">
-                                    <img src="assets/icons/calendar.svg" alt="">
-                                    Dec 8, 2024
-                                </span>
-                            </div>
-                            <h3>Mastering CSS Grid Layouts</h3>
-                            <p>A comprehensive guide to creating responsive and flexible layouts using CSS Grid.</p>
-                            <div class="blog-footer">
-                                <div class="author">
-                                    <img src="https://i.pravatar.cc/40?img=12" alt="Author" class="author-avatar">
-                                    <span>Abhinav</span>
-                                </div>
-                                <a href="#" class="read-link">
-                                    <img src="assets/icons/arrow-right.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </article>
+    renderFeatured();
+    renderGrid(allPosts);
+    setupFilters();
+    setupSearch();
+  });
 
-                    <article class="blog-card" data-category="web">
-                        <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=500&fit=crop" alt="Blog">
-                            <div class="blog-overlay"></div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="post-meta">
-                                <span class="post-category">
-                                    <img src="assets/icons/tag.svg" alt="">
-                                    Web Dev
-                                </span>
-                                <span class="post-date">
-                                    <img src="assets/icons/calendar.svg" alt="">
-                                    Dec 5, 2024
-                                </span>
-                            </div>
-                            <h3>API Design Best Practices</h3>
-                            <p>Essential guidelines for designing robust and developer-friendly REST APIs.</p>
-                            <div class="blog-footer">
-                                <div class="author">
-                                    <img src="https://i.pravatar.cc/40?img=12" alt="Author" class="author-avatar">
-                                    <span>Abhinav</span>
-                                </div>
-                                <a href="#" class="read-link">
-                                    <img src="assets/icons/arrow-right.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </article>
+function renderFeatured() {
+  const featured = allPosts.find(p => p.featured);
+  if (!featured) return;
 
-                    <article class="blog-card" data-category="design">
-                        <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=500&fit=crop" alt="Blog">
-                            <div class="blog-overlay"></div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="post-meta">
-                                <span class="post-category">
-                                    <img src="assets/icons/tag.svg" alt="">
-                                    Design
-                                </span>
-                                <span class="post-date">
-                                    <img src="assets/icons/calendar.svg" alt="">
-                                    Dec 3, 2024
-                                </span>
-                            </div>
-                            <h3>Color Theory for Developers</h3>
-                            <p>Understanding color psychology and how to create harmonious color palettes for your projects.</p>
-                            <div class="blog-footer">
-                                <div class="author">
-                                    <img src="https://i.pravatar.cc/40?img=12" alt="Author" class="author-avatar">
-                                    <span>Abhinav</span>
-                                </div>
-                                <a href="#" class="read-link">
-                                    <img src="assets/icons/arrow-right.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </article>
+  document.querySelector(".featured-image img").src = featured.coverImage;
+  document.querySelector(".featured-content h2").textContent = featured.title;
+  document.querySelector(".featured-content p").textContent = featured.excerpt;
+  document.querySelector(".featured-content .read-more").href = featured.contentUrl;
 
-                    <article class="blog-card" data-category="tutorial">
-                        <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&h=500&fit=crop" alt="Blog">
-                            <div class="blog-overlay"></div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="post-meta">
-                                <span class="post-category">
-                                    <img src="assets/icons/tag.svg" alt="">
-                                    Tutorial
-                                </span>
-                                <span class="post-date">
-                                    <img src="assets/icons/calendar.svg" alt="">
-                                    Dec 1, 2024
-                                </span>
-                            </div>
-                            <h3>Git Workflow for Teams</h3>
-                            <p>Learn effective Git strategies for collaborating with your team and managing code.</p>
-                            <div class="blog-footer">
-                                <div class="author">
-                                    <img src="https://i.pravatar.cc/40?img=12" alt="Author" class="author-avatar">
-                                    <span>Abhinav</span>
-                                </div>
-                                <a href="#" class="read-link">
-                                    <img src="assets/icons/arrow-right.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+  document.querySelector(".post-category").innerHTML = `
+    <img src="assets/icons/tag.svg" alt="">
+    ${featured.categoryLabel}
+  `;
+
+  document.querySelector(".post-date").innerHTML = `
+    <img src="assets/icons/calendar.svg" alt="">
+    ${formatDate(featured.publishedAt)}
+  `;
+
+  document.querySelector(".post-time").innerHTML = `
+    <img src="assets/icons/clock.svg" alt="">
+    ${featured.readTime} min read
+  `;
+}
+
+function renderGrid(posts) {
+  const grid = document.getElementById("blogGrid");
+
+  grid.innerHTML = posts.map(post => `
+    <article class="blog-card" data-category="${post.category}">
+      <div class="blog-image">
+        <img src="${post.thumbnail}" alt="${post.title}">
+        <div class="blog-overlay"></div>
+      </div>
+
+      <div class="blog-content">
+        <div class="post-meta">
+          <span class="post-category">
+            <img src="assets/icons/tag.svg" alt="">
+            ${post.categoryLabel}
+          </span>
+          <span class="post-date">
+            <img src="assets/icons/calendar.svg" alt="">
+            ${formatDate(post.publishedAt)}
+          </span>
+        </div>
+
+        <h3>${post.title}</h3>
+        <p>${post.excerpt}</p>
+
+        <div class="blog-footer">
+          <div class="author">
+            <img src="${post.author.avatar}" class="author-avatar">
+            <span>${post.author.name}</span>
+          </div>
+          <a href="${post.contentUrl}" class="read-link">
+            <img src="assets/icons/arrow-right.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </article>
+  `).join("");
+}
+
+function setupFilters() {
+  document.querySelectorAll(".category-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelector(".category-btn.active")?.classList.remove("active");
+      btn.classList.add("active");
+
+      const cat = btn.dataset.category;
+      renderGrid(cat === "all"
+        ? allPosts
+        : allPosts.filter(p => p.category === cat)
+      );
+    });
+  });
+}
+
+function setupSearch() {
+  const input = document.querySelector(".search-box input");
+
+  input.addEventListener("input", e => {
+    const q = e.target.value.toLowerCase();
+
+    const results = allPosts.filter(p =>
+      p.title.toLowerCase().includes(q) ||
+      p.excerpt.toLowerCase().includes(q) ||
+      p.tags.join(" ").toLowerCase().includes(q)
+    );
+
+    renderGrid(results);
+  });
+}
+
+function formatDate(date) {
+  return new Date(date).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric"
+  });
+}
+</script>
 
                 <!-- Newsletter Section -->
                 <div class="newsletter-section">
