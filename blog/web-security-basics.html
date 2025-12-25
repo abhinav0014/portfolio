@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Web Security Fundamentals: A Beginner's Guide to Secure Websites | ABSTER</title>
+  <meta name="description" content="Learn web security basics including security headers, cookies, CORS, HTTPS, and protection against Open Graph misuse. Includes practical JavaScript examples and security scoring tips.">
+  <meta name="keywords" content="web security, security headers, CORS, HTTPS, cookies, XSS, CSRF, Open Graph security, web safety">
+  <meta name="author" content="Abhinav Gyawali">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Web Security Fundamentals: A Beginner's Guide">
+  <meta property="og:description" content="Essential web security concepts every developer should know, with practical examples and best practices.">
+  <meta property="og:url" content="https://abhinav-gyawali.com.np/blog/web-security-fundamentals">
+  <meta property="og:site_name" content="ABSTER">
+  <meta property="og:image" content="https://abhinav-gyawali.com.np/assets/blog/web-security-guide.jpg">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Web Security Fundamentals: A Beginner's Guide">
+  <meta name="twitter:description" content="Learn essential web security concepts with practical examples.">
+  <meta name="twitter:image" content="https://abhinav-gyawali.com.np/assets/blog/web-security-guide.jpg">
+  <meta name="twitter:creator" content="@abhinav.gyawali07">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://abhinav-gyawali.com.np/blog/web-security-fundamentals">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js"></script>
+
+  <!-- Article Schema Markup -->
+  <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Web Security Fundamentals: A Beginner's Guide to Secure Websites",
+    "description": "Comprehensive guide covering security headers, cookies, CORS, HTTPS, and web security best practices",
+    "author": {
+    "@type": "Person",
+    "name": "Abhinav Gyawali"
+    },
+    "datePublished": "2024-12-21",
+    "dateModified": "2024-12-21",
+    "publisher": {
+    "@type": "Organization",
+    "name": "ABSTER"
+    }
+    }
+  </script>
+</head>
+<body>
+  <div class="bg-animation"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Header -->
+  <nav>
+    <a href="/" class="logo">
+      <div class="logo-icon">
+        AB
+      </div>
+      <span>ABSTER</span>
+    </a>
+
+    <input type="checkbox" id="hamburger">
+    <label for="hamburger" class="hamburger">
+      <img src="/assets/icons/menu.svg" alt="Menu" style="width: 24px; height: 24px;">
+    </label>
+
+    <ul class="nav-links">
+      <li><a href="/"><img src="/assets/icons/home.svg" alt="" class="nav-icon">Home</a></li>
+      <li><a href="/about"><img src="/assets/icons/user.svg" alt="" class="nav-icon">About</a></li>
+      <li><a href="/projects"><img src="/assets/icons/folder.svg" alt="" class="nav-icon">Projects</a></li>
+      <li><a href="/contact"><img src="/assets/icons/mail.svg" alt="" class="nav-icon">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Article Header -->
+    <article class="blog-post">
+      <header class="post-hero">
+        <div class="container">
+          <div class="breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <a href="/blog">Blog</a>
+            <span>/</span>
+            <span>Web Security Fundamentals</span>
+          </div>
+
+          <div class="post-categories">
+            <span class="category-tag">Security</span>
+            <span class="category-tag">Tutorial</span>
+            <span class="category-tag">Best Practices</span>
+          </div>
+
+          <h1 class="post-title">Web Security Fundamentals: A Beginner's Guide to Building Secure Websites</h1>
+
+          <div class="post-meta">
+            <div class="author-info">
+              <img src="https://ui-avatars.com/api/?name=Abhinav+Gyawali&size=48&background=6366f1&color=fff&bold=true" alt="Abhinav Gyawali" class="author-avatar">
+              <div>
+                <span class="author-name">Abhinav Gyawali</span>
+                <time datetime="2024-12-21">December 21, 2024</time>
+              </div>
+            </div>
+            <div class="post-stats">
+              <span class="stat"><img src="/assets/icons/clock.svg" alt="">12 min read</span>
+              <span class="stat"><img src="/assets/icons/eye.svg" alt="">3.2k views</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Article Content -->
+      <section class="post-content">
+        <div class="container">
+          <div class="content-wrapper">
+            <!-- Table of Contents -->
+            <aside class="toc-sidebar">
+              <div class="toc-sticky">
+                <h3>Table of Contents</h3>
+                <ul class="toc-list">
+                  <li><a href="#introduction">Introduction</a></li>
+                  <li><a href="#why-security">Why Security Matters</a></li>
+                  <li><a href="#https">HTTPS & SSL/TLS</a></li>
+                  <li><a href="#security-headers">Security Headers</a></li>
+                  <li><a href="#cookies">Cookie Security</a></li>
+                  <li><a href="#cors">CORS Explained</a></li>
+                  <li><a href="#xss-csrf">XSS & CSRF Protection</a></li>
+                  <li><a href="#open-graph">Open Graph Security</a></li>
+                  <li><a href="#security-scoring">Security Scoring</a></li>
+                  <li><a href="#checklist">Security Checklist</a></li>
+                  <li><a href="#conclusion">Conclusion</a></li>
+                </ul>
+              </div>
+            </aside>
+
+            <!-- Main Article Content -->
+            <div class="article-main">
+              <section id="introduction" class="content-section">
+                <h2>Introduction</h2>
+                <p>
+                  Web security isn't just for large companies or security experts—it's essential for every website, no matter how small. As developers, we're responsible for protecting our users' data and privacy.
+                </p>
+
+                <p>
+                  In this guide, I'll break down fundamental web security concepts that every beginner should understand. We'll cover practical implementations with real code examples you can use in your projects.
+                </p>
+
+                <div class="highlight-box warning">
+                  <strong>⚠️ Important:</strong> Security is not optional. A single vulnerability can compromise your entire application and your users' trust. Let's learn how to build secure websites from the ground up.
+                </div>
+              </section>
+
+              <section id="why-security" class="content-section">
+                <h2>Why Web Security Matters</h2>
+
+                <p>
+                  Before diving into technical details, let's understand why web security is crucial:
+                </p>
+
+                <div class="security-risks">
+                  <div class="risk-card">
+                    <h3>🔓 Data Breaches</h3>
+                    <p>
+                      Exposed user credentials, personal information, and sensitive data can lead to identity theft and financial loss.
+                    </p>
+                  </div>
+
+                  <div class="risk-card">
+                    <h3>💸 Financial Loss</h3>
+                    <p>
+                      Security incidents can result in direct financial losses, legal penalties, and damaged reputation.
+                    </p>
+                  </div>
+
+                  <div class="risk-card">
+                    <h3>😞 Lost Trust</h3>
+                    <p>
+                      Users who experience security issues are unlikely to return. Trust is hard to build and easy to lose.
+                    </p>
+                  </div>
+
+                  <div class="risk-card">
+                    <h3>⚖️ Legal Consequences</h3>
+                    <p>
+                      Data protection regulations like GDPR impose strict requirements and hefty fines for non-compliance.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="highlight-box info">
+                  <strong>💡 Real World Impact:</strong> In 2023, the average cost of a data breach was $4.45 million. Even small websites can be targets for automated attacks.
+                </div>
+              </section>
+
+              <section id="https" class="content-section">
+                <h2>HTTPS & SSL/TLS: Your First Line of Defense</h2>
+
+                <p>
+                  HTTPS (HTTP Secure) encrypts data between the browser and server, preventing eavesdropping and tampering.
+                </p>
+
+                <h3>Why HTTPS is Essential</h3>
+                <ul class="styled-list">
+                  <li><strong>Encryption:</strong> Protects data in transit from interception</li>
+                  <li><strong>Authentication:</strong> Verifies you're connecting to the real website</li>
+                  <li><strong>Data Integrity:</strong> Ensures data hasn't been tampered with</li>
+                  <li><strong>SEO Boost:</strong> Google ranks HTTPS sites higher</li>
+                  <li><strong>Modern Features:</strong> Many browser features require HTTPS</li>
+                </ul>
+
+                <h3>Getting Free SSL Certificates</h3>
+                <div class="code-block">
+                  <div class="code-header">
+                    <span>bash</span>
+                    <button class="copy-btn">Copy</button>
+                  </div>
+                  <pre><code># Using Let's Encrypt with Certbot
+                    # Install Certbot
+                    sudo apt-get install certbot python3-certbot-nginx
+
+                    # Get certificate for your domain
+                    sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+
+                    # Auto-renewal (runs twice daily)
+                    sudo certbot renew --dry-run</code></pre>
+                </div>
+
+                <h3>Redirecting HTTP to HTTPS</h3>
+                <div class="code-block">
+                  <div class="code-header">
+                    <span>javascript</span>
+                    <button class="copy-btn">Copy</button>
+                  </div>
+                  <pre><code>// Client-side redirect (for static sites)
+                    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+                    location.replace(`https:${location.href.substring(location.protocol.length)}`);
+                    }
+
+                    // Express.js middleware
+                    app.use((req, res, next) => {
+                    if (req.header('x-forwarded-proto') !== 'https' && process.env.NODE_ENV === 'production') {
+                    res.redirect(`https://${req.header('host')}${req.url}`);
+                    } else {
+                    next();
+                    }
+                    });</code></pre>
+                </div>
+
+                <div class="highlight-box success">
+                  <strong>✅ Free HTTPS Options:</strong> Let's Encrypt, Cloudflare, GitHub Pages, Vercel, and Netlify all offer free SSL certificates!
+                </div>
+              </section>
+
+              <section id="security-headers" class="content-section">
+                <h2>Security Headers: Your Website's Shield</h2>
+
+                <p>
+                  Security headers are HTTP response headers that tell browsers how to behave when handling your site's content. They're your first line of defense against many common attacks.
+                </p>
+
+                <h3>Essential Security Headers</h3>
+
+                <div class="header-explanation">
+                  <h4>1. Content-Security-Policy (CSP)</h4>
+                  <p>
+                    Prevents XSS attacks by controlling which resources can be loaded.
+                  </p>
+                  <div class="code-block">
+                    <div class="code-header">
+                      <span>http</span>
+                      <button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>Content-Security-Policy: default-src 'self';
+                      script-src 'self' 'unsafe-inline' https://trusted-cdn.com;
+                      style-src 'self' 'unsafe-inline';
+                      img-src 'self' data: https:;
+                      font-src 'self' https://fonts.gstatic.com;</code></pre>
+                  </div>
+
+                  <h4>2. X-Frame-Options</h4>
+                  <p>
+                    Prevents clickjacking by controlling if your site can be embedded in frames.
+                  </p>
+                  <div class="code-block">
+                    <div class="code-header">
+                      <span>http</span>
+                      <button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>X-Frame-Options: DENY
+                      # or
+                      X-Frame-Options: SAMEORIGIN</code></pre>
+                  </div>
+
+                  <h4>3. X-Content-Type-Options</h4>
+                  <p>
+                    Prevents MIME type sniffing attacks.
+                  </p>
+                  <div class="code-block">
+                    <div class="code-header">
+                      <span>http</span>
+                      <button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>X-Content-Type-Options: nosniff</code></pre>
+                  </div>
+
+                  <h4>4. Strict-Transport-Security (HSTS)</h4>
+                  <p>
+                    Forces browsers to use HTTPS for all future requests.
+                  </p>
+                  <div class="code-block">
+                    <div class="code-header">
+                      <span>http</span>
+                      <button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code></pre>
+                  </div>
+
+                  <h4>5. Referrer-Policy</h4>
+                  <p>
+                    Controls how much referrer information is sent with requests.
+                  </p>
+                  <div class="code-block">
+                    <div class="code-header">
+                      <span>http</span>
+                      <button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>Referrer-Policy: strict-origin-when-cross-origin</code></pre>
+                  </div>
+
+                  <h4>6. Permissions-Policy</h4>
+                  <p>
+                    Controls which browser features and APIs can be used.
+                  </p>
+                  <div class="code-block">
+                    <div class="code-header">
+                      <span>http</span>
+                      <button class="copy-btn">Copy</button>
+                    </div>
+                    <pre><code>Permissions-Policy: geolocation=(), camera=(), microphone=()</code></pre>
+                  </div>
+                </div>
+
+                <h3>Implementing Headers in Different Frameworks</h3>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span>Express.js</span>
+                    <button class="copy-btn">Copy</button>
+                  </div>
+                  <pre><code>const helmet = require('helmet');
+
+                    app.use(helmet({
+                    contentSecurityPolicy: {
+                    directives: {
+                    defaultSrc: ["'self'"],
+                    scriptSrc: ["'self'", "'unsafe-inline'", "trusted-cdn.com"],
+                    styleSrc: ["'self'", "'unsafe-inline'"],
+                    imgSrc: ["'self'", "data:", "https:"],
+                    }
+                    },
+                    hsts: {
+                    maxAge: 31536000,
+                    includeSubDomains: true,
+                    preload: true
+                    }
+                    }));</code></pre>
+                </div>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span>Django</span>
+                    <button class="copy-btn">Copy</button>
+                  </div>
+                  <pre><code># settings.py
+                    SECURE_HSTS_SECONDS = 31536000
+                    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+                    SECURE_HSTS_PRELOAD = True
+                    SECURE_SSL_REDIRECT = True
+                    SESSION_COOKIE_SECURE = True
+                    CSRF_COOKIE_SECURE = True
+                    SECURE_BROWSER_XSS_FILTER = True
+                    SECURE_CONTENT_TYPE_NOSNIFF = True
+                    X_FRAME_OPTIONS = 'DENY'
+
+                    # CSP with django-csp
+                    CSP_DEFAULT_SRC = ("'self'",)
+                    CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'", "https://trusted-cdn.com")
+                    CSP_STYLE_SRC = ("'self'", "'unsafe-inline'")</code></pre>
+                </div>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span>Nginx</span>
+                    <button class="copy-btn">Copy</button>
+                  </div>
+                  <pre><code># nginx.conf
+                    add_header X-Frame-Options "SAMEORIGIN" always;
+                    add_header X-Content-Type-Options "nosniff" always;
+                    add_header X-XSS-Protection "1; mode=block" always;
+                    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+                    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+                    add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';" always;</code></pre>
+                </div>
+              </section>
+
+              <section id="cookies" class="content-section">
+                <h2>Cookie Security: Protecting User Sessions</h2>
+
+                <p>
+                  Cookies store session data, authentication tokens, and user preferences. Improperly secured cookies are a major vulnerability.
+                </p>
+
+                <h3>Cookie Attributes Explained</h3>
+
+                <div class="cookie-attributes">
+                  <div class="attribute-card">
+                    <h4>HttpOnly</h4>
+                    <p>
+                      Prevents JavaScript access, protecting against XSS attacks.
+                    </p>
+                    <code>Set-Cookie: sessionId=abc123; HttpOnly</code>
+                  </div>
+
+                  <div class="attribute-card">
+                    <h4>Secure</h4>
+                    <p>
+                      Ensures cookies are only sent over HTTPS.
+                    </p>
+                    <code>Set-Cookie: sessionId=abc123; Secure</code>
+                  </div>
+
+                  <div class="attribute-card">
+                    <h4>SameSite</h4>
+                    <p>
+                      Prevents CSRF attacks by controlling cross-site requests.
+                    </p>
+                    <code>Set-Cookie: sessionId=abc123; SameSite=Strict</code>
+                  </div>
+
+                  <div class="attribute-card">
+                    <h4>Max-Age / Expires</h4>
+                    <p>
+                      Sets cookie expiration time.
+                    </p>
+                    <code>Set-Cookie: sessionId=abc123; Max-Age=3600</code>
+                  </div>
+                </div>
+
+                <h3>SameSite Values Explained</h3>
+                <ul class="styled-list">
+                  <li><strong>Strict:</strong> Cookie never sent in cross-site requests (most secure)</li>
+                  <li><strong>Lax:</strong> Sent with top-level navigation (default, balanced)</li>
+                  <li><strong>None:</strong> Sent with all requests (requires Secure flag)</li>
+                </ul>
+
+                <h3>Setting Secure Cookies in Code</h3>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span>JavaScript (Express)</span>
+                    <button class="copy-btn">Copy</button>
+                  </div>
+                  <pre><code>// Setting secure cookies
+                    res.cookie('sessionId', 'abc123xyz', {
+                    httpOnly: true,      // Prevent XSS
+                    secure: true,        // HTTPS only
+                    sameSite: 'strict',  // Prevent CSRF
+                    maxAge: 3600000,     // 1 hour
+                    path: '/',           // Available site-wide
+                    domain: '.yourdomain.com' // Include subdomains
+                    });
+
+                    // Reading cookies (server-side)
+                    const cookieParser = require('cookie-parser');
+                    app.use(cookieParser());
+
+                    app.get('/profile', (req, res) => {
+                    const sessionId = req.cookies.sessionId;
+                    // Verify session...
+                    });</code></pre>
+                </div>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span>Python (Django)</span>
+                    <button class="copy-btn">Copy</button>
+                  </div>
+                  <pre><code># views.py
+                    from django.http import HttpResponse
+
+                    def login(request):
+                    response = HttpResponse("Logged in")
+                    response.set_cookie(
+                    'sessionid',
+                    'abc123xyz',
+                    max_age=3600,
+                    secure=True,
+                    httponly=True,
+                    samesite='Strict'
+                    )
+                    return response
+
+                    # Reading cookies
+                    def profile(request):
+                    session_id = request.COOKIES.get('sessionid')
+                    # Verify session...</code></pre>
+                </div>
+
+                <div class="highlight-box warning">
+                  <strong>⚠️ Never Store Sensitive Data in Cookies:</strong> Don't store passwords, credit cards, or sensitive personal information in cookies. Use server-side sessions instead.
+                </div>
+
+                <h3>Client-Side Cookie Management (Limited Access)</h3>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span>JavaScript</span>
+                    <button class="copy-btn">Copy</button>
+                  </div>
+                  <pre><code>// Set cookie (client-side, non-HttpOnly)
+                    function setCookie(name, value, days) {
+                    const expires = new Date();
+                    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+                    document.cookie = `${name}=${value}; expires=${expires.toUTCString()}; path=/; Secure; SameSite=Strict`;
+                    }
+
+                    // Get cookie
+                    function getCookie(name) {
+                    const cookies = document.cookie.split(';');
+                    for (let cookie of cookies) {
+                    const [key, value] = cookie.trim().split('=');
+                    if (key === name) return value;
+                    }
+                    return null;
+                    }
+
+                    // Delete cookie
+                    function deleteCookie(name) {
+                    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+                    }
+
+                    // Usage
+                    setCookie('theme', 'dark', 365);
+                    const theme = getCookie('theme');
+                    console.log(theme); // 'dark'
+
+                    // Note: You can't access HttpOnly cookies from JavaScript (that's the point!)</code></pre>
+                </div>
+              </section>
+
+              <section id="cors" class="content-section">
+                <h2>CORS: Cross-Origin Resource Sharing</h2>
+
+                <p>
+                  CORS is a security feature that controls which domains can access your API. Understanding CORS is crucial for building modern web applications.
+                </p>
+
+                <h3>What is CORS?</h3>
+                <p>
+                  CORS (Cross-Origin Resource Sharing) is a mechanism that uses HTTP headers to tell browsers whether to allow a web application running at one origin to access resources from a different origin.
+                </p>
+
+                <div class="cors-explanation">
+                  <div class="cors-scenario">
+                    <h4>🚫 Blocked by CORS (Different Origins)</h4>
+                    <code>
+                      Frontend: https://myapp.com<br>
+                      API: https://api.anotherapp.com<br>
+                      <span style="color: #ef4444;">❌ Blocked without proper CORS headers</span>
+                    </code>
+                  </div>
+
+                  <div class="cors-scenario">
+                    <h4>✅ Allowed (Same Origin)</h4>
+                    <code>
+                      Frontend: https://myapp.com<br>
+                      API: https://myapp.com/api<br>
+                      <span style="color: #22c55e;">✓ Allowed - same origin</span>
+                    </code>
+                  </div>
+                </div>
+
+                <h3>CORS Headers Explained</h3>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span>HTTP Headers</span>
+                    <button class="copy-btn">Copy</button>
+                  </div>
+                  <pre><code># Allow specific origin
+                    Access-Control-Allow-Origin: https://myapp.com
+
+                    # Allow all origins (⚠️ Use carefully!)
+                    Access-Control-Allow-Origin: *
+
+                    # Allow credentials (cookies)
+                    Access-Control-Allow-Credentials: true
+
+                    # Allow specific methods
+                    Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+
+                    # Allow specific headers
+                    Access-Control-Allow-Headers: Content-Type, Authorization
+
+                    # Cache preflight requests
+                    Access-Control-Max-Age: 86400</code></pre>
+                </div>
+
+                <h3>Implementing CORS in Your Backend</h3>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span>Express.js</span>
+                    <button class="copy-btn">Copy</button>
+                  </div>
+                  <pre><code>const cors = require('cors');
+
+                    // Simple CORS (allow all)
+                    app.use(cors());
+
+                    // Configured CORS (recommended)
+                    const corsOptions = {
+                    origin: ['https://myapp.com', 'https://www.myapp.com'],
+                    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+                    allowedHeaders: ['Content-Type', 'Authorization'],
+                    credentials: true,
+                    maxAge: 86400
+                    };
+
+                    app.use(cors(corsOptions));
+
+                    // Dynamic origin checking
+                    app.use(cors({
+                    origin: function(origin, callback) {
+                    const allowedOrigins = ['https://myapp.com', 'http://localhost:3000'];
+                    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+                    callback(null, true);
+                    } else {
+                    callback(new Error('Not allowed by CORS'));
+                    }
+                    },
+                    credentials: true
+                    }));</code></pre>
+                </div>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span>Django</span>
+                    <button class="copy-btn">Copy</button>
+                  </div>
+                  <pre><code># Install: pip install django-cors-headers
+
+                    # settings.py
+                    INSTALLED_APPS = [
+                    ...
+                    'corsheaders',
+                    ]
+
+                    MIDDLEWARE = [
+                    'corsheaders.middleware.CorsMiddleware',
+                    'django.middleware.common.CommonMiddleware',
+                    ...
+                    ]
+
+                    # Allow specific origins
+                    CORS_ALLOWED_ORIGINS = [
+                    "https://myapp.com",
+                    "https://www.myapp.com",
+                    "http://localhost:3000",
+                    ]
+
+                    # Or allow all (not recommended for production)
+                    CORS_ALLOW_ALL_ORIGINS = False
+
+                    # Allow credentials
+                    CORS_ALLOW_CREDENTIALS = True
+
+                    # Allow specific methods
+                    CORS_ALLOW_METHODS = [
+                    'GET',
+                    'POST',
+                    'PUT',
+                    'PATCH',
+                    'DELETE',
+                    'OPTIONS',
+                    ]</code></pre>
+                </div>
+
+                <h3>Making CORS Requests from Frontend</h3>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span>JavaScript (Fetch API)</span>
+                    <button class="copy-btn">Copy</button>
+                  </div>
+                  <pre><code>// Simple GET request
+                    fetch('https://api.example.com/data')
+                    .then(response => response.json())
+                    .then(data => console.log(data))
+                    .catch(error => console.error('CORS Error:', error));
+
+                    // POST with credentials
+                    fetch('https://api.example.com/login', {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    credentials: 'include', // Include cookies
+                    body: JSON.stringify({
+                    username: 'user',
+                    password: 'pass'
+                    })
+                    })
+                    .then(response => response.json())
+                    .then(data => console.log(data));
+
+                    // With Authorization header
+                    fetch('https://api.example.com/protected', {
+                    headers: {
+                    'Authorization': 'Bearer your-token-here',
+                    'Content-Type': 'application/json'
+                    }
+                    })
+                    .then(response => response.json())
+                    .then(data => console.log(data));</code></pre>
+                </div>
+
+                <div class="highlight-box warning">
+                  <strong>⚠️ CORS Security Tips:</strong>
+                  <ul>
+                    <li>Never use <code>Access-Control-Allow-Origin: *</code> with credentials</li>
+                    <li>Whitelist only trusted domains</li>
+                    <li>Validate origin on the server side</li>
+                    <li>Use environment variables for allowed origins</li>
+                  </ul>
+                </div>
+              </section>
+
+              <section id="xss-csrf" class="content-section">
+                <h2>XSS & CSRF Protection</h2>
+
+                <h3>Cross-Site Scripting (XSS)</h3>
+                <p>
+                  XSS attacks inject malicious scripts into your website. There are three types:
+                </p>
+
+                <div class="attack-types">
+                  <div class="attack-card">
+                    <h4>Stored XSS</h4>
+                    <p>
+                      Malicious script stored in database and displayed to all users.
+                    </p>
+                  </div>
+                  <div class="attack-card">
+                    <h4>Reflected XSS</h4>
+                    <p>
+                      Script reflected from URL or form input back to user.
+                    </p>
+                  </div>
+                  <div class="attack-card">
+                    <h4>DOM-based XSS</h4>
+                    <p>
+                      Attack manipulates the DOM directly in browser.
+                    </p>
+                  </div>
+                </div>
+
+                <h3>Preventing XSS Attacks</h3>
+
+                <div class="code-block">
+                  <div class="code-header">
+                    <span>JavaScript - Input Sanitization</span>
+                    <button class="copy-btn">Copy</button>
+                  </div>
+                  <pre><code>// Bad - Vulnerable to XSS
+                    function displayUserInput(input) {
+                    document.getElementById('output').innerHTML = input; // ❌ DANGEROUS!
+                    }
+
+                    // Good - Sanitize user input
+                    function displayUserInputSafe(input) {
+                    // Use textContent instead of innerHTML
+                    document.getElementById('output').textContent = input; // ✓ Safe
+                    }
+
+                    // HTML escape function
+                    function escapeHtml(text) {
+                    const map = {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                      '>': '&gt;',
+                      '"': '&quot;',
+                      "'": '&#039;'
+                      };
+                      return text.replace(/[&<>"']/g, m => map[m]);
+                        }
+
+                        // Usage
+                        const userInput = &gt;script&lt;
+                        alert("XSS")
+                        &gt;/script&lt;
+                        ;
+                        document.getElementById('output').innerHTML = escapeHtml(userInput);
+                        // Output: &lt;script&gt;alert("XSS")&lt;/script&gt;
+
+                        // Using DOMPurify library (recommended)
+                        // <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+                        const clean = DOMPurify.sanitize(userInput);
+                        document.getElementById('output').innerHTML = clean;</code></pre>
+                  </div>
+
+                    <h3>Cross-Site Request Forgery (CSRF)</h3>
+                    <p>
+                      CSRF tricks users into performing unwanted actions on authenticated sites.
+                    </p>
+
+                    <div class="code-block">
+                      <div class="code-header">
+                        <span>CSRF Protection - Backend</span>
+                        <button class="copy-btn">Copy</button>
+                      </div>
+                      <pre><code>
+                        // Express.js with csurf
+                        const csrf = require('csurf');
+                        const csrfProtection = csrf({ cookie: true });
+                        app.use(cookieParser());
+                        app.use(csrfProtection);
+                        // Send CSRF token to client
+                        app.get('/form', (req, res) => {
+                        res.render('form', { csrfToken: req.csrfToken() });
+                        });
+
+                        // Verify CSRF token on POST
+                        app.post('/transfer', csrfProtection, (req, res) => {
+                        // Token is automatically verified
+                        // Process the request...
+                        res.json({ success: true });
+                        });
+                      </code></pre>
+                    </div>
+
+                    <div class="code-block">
+                      <div class="code-header">
+                        <span>CSRF Protection - Frontend</span>
+                        <button class="copy-btn">Copy</button>
+                      </div>
+                      <pre><code>// Include CSRF token in forms
+                        <form action="/transfer" method="POST">
+                          <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                          <input type="text" name="amount">
+                          <button type="submit">Transfer</button>
+                        </form>
+
+                        // Include CSRF token in AJAX requests
+                        fetch('/api/data', {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json',
+                        'CSRF-Token': getCsrfToken() // Get from meta tag or cookie
+                        },
+                        body: JSON.stringify({ data: 'value' })
+                        });
+
+                        // Get CSRF token from meta tag
+                        function getCsrfToken() {
+                        return document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+                        }</code></pre>
+                    </div>
+
+                    <div class="highlight-box info">
+                      <strong>💡 CSRF Protection Best Practices:</strong>
+                      <ul>
+                        <li>Use CSRF tokens for state-changing operations</li>
+                        <li>Implement SameSite cookie attribute</li>
+                        <li>Verify Origin and Referer headers</li>
+                        <li>Use POST for sensitive operations, never GET</li>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <section id="open-graph" class="content-section">
+                    <h2>Open Graph Security & Misuse Prevention</h2>
+
+                    <p>
+                      Open Graph tags control how your content appears when shared on social media. Improper implementation can lead to security issues and misinformation.
+                    </p>
+
+                    <h3>Common Open Graph Vulnerabilities</h3>
+
+                    <div class="security-risks">
+                      <div class="risk-card">
+                        <h3>🎭 Social Engineering</h3>
+                        <p>
+                          Attackers can manipulate OG tags to display misleading information in social media previews.
+                        </p>
+                      </div>
+
+                      <div class="risk-card">
+                        <h3>🔗 Link Injection</h3>
+                        <p>
+                          Malicious URLs can be embedded in OG images or URLs to trick users.
+                        </p>
+                      </div>
+
+                      <div class="risk-card">
+                        <h3>📸 Image Hijacking</h3>
+                        <p>
+                          Unauthorized use of images or hosting malicious images via og:image.
+                        </p>
+                      </div>
+
+                      <div class="risk-card">
+                        <h3>🕵️ Privacy Leaks</h3>
+                        <p>
+                          Exposing sensitive information in preview metadata.
+                        </p>
+                      </div>
+                    </div>
+
+                    <h3>Secure Open Graph Implementation</h3>
+
+                    <div class="code-block">
+                      <div class="code-header">
+                        <span>HTML - Secure OG Tags</span>
+                        <button class="copy-btn">Copy</button>
+                      </div>
+                      <pre><code>
+                        &gt;!DOCTYPE html&lt;
+                        &gt;html lang="en"&lt;
+                        &gt;head&lt;
+                        &gt;!-- Essential OG tags --&lt;
+                        &gt;meta property="og:title" content="Your Page Title"&lt;
+                        &gt;meta property="og:description" content="Clear, accurate description"&lt;
+                        &gt;meta property="og:type" content="website"&lt;
+
+                        &gt;!-- Use absolute HTTPS URLs only --&lt;
+                        &gt;meta property="og:url" content="https://yourdomain.com/page"&lt;
+                        &gt;meta property="og:image" content="https://yourdomain.com/image.jpg"&lt;
+
+                        &gt;!-- Specify image dimensions (required by some platforms) --&lt;
+                        &gt;meta property="og:image:width" content="1200"&lt;
+                        &gt;meta property="og:image:height" content="630"&lt;
+                        &gt;meta property="og:image:type" content="image/jpeg"&lt;
+                        &gt;meta property="og:image:alt" content="Descriptive alt text"&lt;
+
+                        &gt;!-- Secure image URL (HTTPS only) --&lt;
+                        &gt;meta property="og:image:secure_url" content="https://yourdomain.com/image.jpg"&lt;
+
+                        &gt;!-- Site information --&lt;
+                        &gt;meta property="og:site_name" content="Your Site Name"&lt;
+                        &gt;meta property="og:locale" content="en_US"&lt;
+
+                        &gt;!-- Twitter Card tags for better Twitter integration --&lt;
+                        &gt;meta name="twitter:card" content="summary_large_image"&lt;
+                        &gt;meta name="twitter:site" content="@yourusername"&lt;
+                        &gt;meta name="twitter:creator" content="@yourusername"&lt;
+                        &gt;meta name="twitter:title" content="Your Page Title"&lt;
+                        &gt;meta name="twitter:description" content="Clear, accurate description"&lt;
+                        &gt;meta name="twitter:image" content="https://yourdomain.com/image.jpg"&lt;
+                        &gt;/head&lt;
+                        &gt;body&lt;
+                        &gt;!-- Your content --&lt;
+                        &gt;/body&lt;
+                        &gt;/html&lt;
+                      </code></pre>
+                    </div>
+
+                    <h3>Server-Side OG Tag Validation</h3>
+
+                    <div class="code-block">
+                      <div class="code-header">
+                        <span>JavaScript - OG Tag Sanitization</span>
+                        <button class="copy-btn">Copy</button>
+                      </div>
+                      <pre><code>
+                        // Sanitize and validate OG tags
+                        function generateSecureOGTags(data) {
+                        // Escape HTML entities
+                        const escapeHtml = (text) =&lt; {
+                        return text
+                        .replace(/&/g, '&amp;')
+                        .replace(/&GT;/g, '&lt;')
+                        .replace(/&lt;/g, '&gt;')
+                        .replace(/"/g, '&quot;')
+                        .replace(/'/g, '&#039;');
+                        };
+
+                        // Validate URL is HTTPS and from trusted domain
+                        const validateUrl = (url) =&lt; {
+                        try {
+                        const parsed = new URL(url);
+                        return parsed.protocol === 'https:' &&
+                        parsed.hostname === 'yourdomain.com';
+                        } catch {
+                        return false;
+                        }
+                        };
+
+                        // Sanitize text content
+                        const title = escapeHtml(data.title.substring(0, 60)); // Limit length
+                        const description = escapeHtml(data.description.substring(0, 155));
+
+                        // Validate image URL
+                        const imageUrl = validateUrl(data.imageUrl) ? data.imageUrl : 'https://yourdomain.com/default.jpg';
+                        const pageUrl = validateUrl(data.pageUrl) ? data.pageUrl : 'https://yourdomain.com';
+
+                        return {
+                        title,
+                        description,
+                        imageUrl,
+                        pageUrl
+                        };
+                        }
+
+                        // Usage in Express.js
+                        app.get('/article/:id', async (req, res) =&lt; {
+                        const article = await getArticle(req.params.id);
+
+                        const ogTags = generateSecureOGTags({
+                        title: article.title,
+                        description: article.excerpt,
+                        imageUrl: article.imageUrl,
+                        pageUrl: `https://yourdomain.com/article/${article.id}`
+                        });
+
+                        res.render('article', { article, ogTags });
+                        });
+                      </code></pre>
+                    </div>
+
+                    <h3>Dynamic OG Tags with React/Next.js</h3>
+
+                    <div class="code-block">
+                      <div class="code-header">
+                        <span>React - Next.js Head Component</span>
+                        <button class="copy-btn">Copy</button>
+                      </div>
+                      <pre><code>
+                        import Head from 'next/head';
+
+                        export default function ArticlePage({ article }) {
+                        const ogTitle = article.title.replace(/[&gt;&lt;"']/g, '');
+                        const ogDescription = article.description.replace(/[&gt;&lt;"']/g, '');
+                        const ogImage = `https://yourdomain.com${article.image}`;
+                        const ogUrl = `https://yourdomain.com/article/${article.slug}`;
+
+                        return (
+                        &gt;&lt;
+                        &gt;Head&lt;
+                        &gt;title&lt;{ogTitle}&gt;/title&lt;
+                        &gt;meta name="description" content={ogDescription} /&lt;
+
+                        &gt;meta property="og:title" content={ogTitle} /&lt;
+                        &gt;meta property="og:description" content={ogDescription} /&lt;
+                        &gt;meta property="og:image" content={ogImage} /&lt;
+                        &gt;meta property="og:url" content={ogUrl} /&lt;
+                        &gt;meta property="og:type" content="article" /&lt;
+
+                        &gt;meta name="twitter:card" content="summary_large_image" /&lt;
+                        &gt;meta name="twitter:title" content={ogTitle} /&lt;
+                        &gt;meta name="twitter:description" content={ogDescription} /&lt;
+                        &gt;meta name="twitter:image" content={ogImage} /&lt;
+                        &gt;/Head&lt;
+
+                        &gt;article&lt;
+                        &gt;h1&lt;{article.title}&gt;/h1&lt;
+                        &gt;p&lt;
+                        {article.content}
+                        &gt;/p&lt;
+                        &gt;/article&lt;
+                        &gt;/&lt;
+                        );
+                        }
+                      </code></pre>
+                    </div>
+
+                    <div class="highlight-box warning">
+                      <strong>⚠️ OG Tag Security Checklist:</strong>
+                      <ul>
+                        <li>✓ Always use HTTPS URLs</li>
+                        <li>✓ Sanitize all user-generated content</li>
+                        <li>✓ Validate image URLs and dimensions</li>
+                        <li>✓ Limit text length to prevent overflow</li>
+                        <li>✓ Use Content Security Policy for images</li>
+                        <li>✓ Monitor for unauthorized content scraping</li>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <section id="security-scoring" class="content-section">
+                    <h2>Website Security Scoring & Testing</h2>
+
+                    <p>
+                      How do you know if your website is secure? Use these tools and techniques to assess your security posture.
+                    </p>
+
+                    <h3>Free Security Testing Tools</h3>
+
+                    <div class="tools-grid">
+                      <div class="tool-card">
+                        <h3>Mozilla Observatory</h3>
+                        <p>
+                          <strong>Tests:</strong> Headers, HTTPS, cookies
+                        </p>
+                        <p>
+                          <strong>URL:</strong> <a href="https://observatory.mozilla.org" target="_blank">observatory.mozilla.org</a>
+                        </p>
+                        <p>
+                          <strong>Score:</strong> A+ to F rating
+                        </p>
+                      </div>
+
+                      <div class="tool-card">
+                        <h3>Security Headers</h3>
+                        <p>
+                          <strong>Tests:</strong> All security headers
+                        </p>
+                        <p>
+                          <strong>URL:</strong> <a href="https://securityheaders.com" target="_blank">securityheaders.com</a>
+                        </p>
+                        <p>
+                          <strong>Score:</strong> A to F with detailed report
+                        </p>
+                      </div>
+
+                      <div class="tool-card">
+                        <h3>SSL Labs</h3>
+                        <p>
+                          <strong>Tests:</strong> SSL/TLS configuration
+                        </p>
+                        <p>
+                          <strong>URL:</strong> <a href="https://www.ssllabs.com/ssltest" target="_blank">ssllabs.com/ssltest</a>
+                        </p>
+                        <p>
+                          <strong>Score:</strong> A+ to F rating
+                        </p>
+                      </div>
+
+                      <div class="tool-card">
+                        <h3>Lighthouse</h3>
+                        <p>
+                          <strong>Tests:</strong> Performance, accessibility, SEO
+                        </p>
+                        <p>
+                          <strong>URL:</strong> Built into Chrome DevTools
+                        </p>
+                        <p>
+                          <strong>Score:</strong> 0-100 for each category
+                        </p>
+                      </div>
+                    </div>
+
+                    <h3>Building Your Own Security Checker</h3>
+
+                    <div class="code-block">
+                      <div class="code-header">
+                        <span>JavaScript - Security Score Calculator</span>
+                        <button class="copy-btn">Copy</button>
+                      </div>
+                      <pre><code>async function checkWebsiteSecurity(url) {
+                        const results = {
+                        score: 0,
+                        maxScore: 100,
+                        issues: [],
+                        passed: []
+                        };
+
+                        try {
+                        const response = await fetch(url);
+                        const headers = response.headers;
+
+                        // Check HTTPS (20 points)
+                        if (url.startsWith('https://')) {
+                        results.score += 20;
+                        results.passed.push('✓ HTTPS enabled');
+                        } else {
+                        results.issues.push('❌ No HTTPS - use SSL certificate');
+                        }
+
+                        // Check Strict-Transport-Security (15 points)
+                        if (headers.get('strict-transport-security')) {
+                        results.score += 15;
+                        results.passed.push('✓ HSTS header present');
+                        } else {
+                        results.issues.push('❌ Missing HSTS header');
+                        }
+
+                        // Check Content-Security-Policy (20 points)
+                        if (headers.get('content-security-policy')) {
+                        results.score += 20;
+                        results.passed.push('✓ CSP header present');
+                        } else {
+                        results.issues.push('❌ Missing Content-Security-Policy');
+                        }
+
+                        // Check X-Frame-Options (10 points)
+                        if (headers.get('x-frame-options')) {
+                        results.score += 10;
+                        results.passed.push('✓ X-Frame-Options set');
+                        } else {
+                        results.issues.push('❌ Missing X-Frame-Options');
+                        }
+
+                        // Check X-Content-Type-Options (10 points)
+                        if (headers.get('x-content-type-options') === 'nosniff') {
+                        results.score += 10;
+                        results.passed.push('✓ X-Content-Type-Options: nosniff');
+                        } else {
+                        results.issues.push('❌ Missing X-Content-Type-Options');
+                        }
+
+                        // Check Referrer-Policy (10 points)
+                        if (headers.get('referrer-policy')) {
+                        results.score += 10;
+                        results.passed.push('✓ Referrer-Policy set');
+                        } else {
+                        results.issues.push('❌ Missing Referrer-Policy');
+                        }
+
+                        // Check Permissions-Policy (15 points)
+                        if (headers.get('permissions-policy')) {
+                        results.score += 15;
+                        results.passed.push('✓ Permissions-Policy configured');
+                        } else {
+                        results.issues.push('❌ Missing Permissions-Policy');
+                        }
+
+                        // Determine grade
+                        results.grade = getSecurityGrade(results.score);
+
+                        return results;
+
+                        } catch (error) {
+                        return {
+                        error: 'Failed to check website security',
+                        message: error.message
+                        };
+                        }
+                        }
+
+                        function getSecurityGrade(score) {
+                        if (score >= 90) return 'A+';
+                        if (score >= 80) return 'A';
+                        if (score >= 70) return 'B';
+                        if (score >= 60) return 'C';
+                        if (score >= 50) return 'D';
+                        return 'F';
+                        }
+
+                        // Usage
+                        checkWebsiteSecurity('https://yourdomain.com')
+                        .then(results => {
+                        console.log(`Security Score: ${results.score}/${results.maxScore}`);
+                        console.log(`Grade: ${results.grade}`);
+                        console.log('\nPassed Checks:');
+                        results.passed.forEach(item => console.log(item));
+                        console.log('\nIssues Found:');
+                        results.issues.forEach(item => console.log(item));
+                        });</code></pre>
+                    </div>
+
+                    <h3>Security Score Breakdown</h3>
+
+                    <div class="score-breakdown">
+                      <div class="score-item">
+                        <span class="score-label">HTTPS Implementation</span>
+                        <span class="score-value">20 points</span>
+                      </div>
+                      <div class="score-item">
+                        <span class="score-label">Content Security Policy</span>
+                        <span class="score-value">20 points</span>
+                      </div>
+                      <div class="score-item">
+                        <span class="score-label">HSTS Header</span>
+                        <span class="score-value">15 points</span>
+                      </div>
+                      <div class="score-item">
+                        <span class="score-label">Permissions Policy</span>
+                        <span class="score-value">15 points</span>
+                      </div>
+                      <div class="score-item">
+                        <span class="score-label">X-Frame-Options</span>
+                        <span class="score-value">10 points</span>
+                      </div>
+                      <div class="score-item">
+                        <span class="score-label">X-Content-Type-Options</span>
+                        <span class="score-value">10 points</span>
+                      </div>
+                      <div class="score-item">
+                        <span class="score-label">Referrer-Policy</span>
+                        <span class="score-value">10 points</span>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section id="checklist" class="content-section">
+                    <h2>Complete Security Checklist</h2>
+
+                    <p>
+                      Use this checklist to ensure your website follows security best practices:
+                    </p>
+
+                    <div class="checklist">
+                      <h3>🔒 HTTPS & SSL/TLS</h3>
+                      <ul class="checklist-items">
+                        <li><input type="checkbox"> Valid SSL certificate installed</li>
+                        <li><input type="checkbox"> HTTP redirects to HTTPS</li>
+                        <li><input type="checkbox"> HSTS header configured</li>
+                        <li><input type="checkbox"> SSL Labs score A or higher</li>
+                      </ul>
+
+                      <h3>🛡️ Security Headers</h3>
+                      <ul class="checklist-items">
+                        <li><input type="checkbox"> Content-Security-Policy configured</li>
+                        <li><input type="checkbox"> X-Frame-Options set to DENY or SAMEORIGIN</li>
+                        <li><input type="checkbox"> X-Content-Type-Options set to nosniff</li>
+                        <li><input type="checkbox"> Referrer-Policy configured</li>
+                        <li><input type="checkbox"> Permissions-Policy configured</li>
+                      </ul>
+
+                      <h3>🍪 Cookie Security</h3>
+                      <ul class="checklist-items">
+                        <li><input type="checkbox"> HttpOnly flag on session cookies</li>
+                        <li><input type="checkbox"> Secure flag on all cookies</li>
+                        <li><input type="checkbox"> SameSite attribute set appropriately</li>
+                        <li><input type="checkbox"> Cookie expiration times set</li>
+                      </ul>
+
+                      <h3>🔐 Authentication & Authorization</h3>
+                      <ul class="checklist-items">
+                        <li><input type="checkbox"> Strong password requirements</li>
+                        <li><input type="checkbox"> Password hashing (bcrypt, argon2)</li>
+                        <li><input type="checkbox"> Rate limiting on login attempts</li>
+                        <li><input type="checkbox"> Session timeout configured</li>
+                        <li><input type="checkbox"> Two-factor authentication available</li>
+                      </ul>
+
+                      <h3>🛠️ Input Validation</h3>
+                      <ul class="checklist-items">
+                        <li><input type="checkbox"> All user input sanitized</li>
+                        <li><input type="checkbox"> SQL injection prevention</li>
+                        <li><input type="checkbox"> XSS protection implemented</li>
+                        <li><input type="checkbox"> CSRF tokens on forms</li>
+                        <li><input type="checkbox"> File upload validation</li>
+                      </ul>
+
+                      <h3>🌐 API Security</h3>
+                      <ul class="checklist-items">
+                        <li><input type="checkbox"> CORS properly configured</li>
+                        <li><input type="checkbox"> API rate limiting</li>
+                        <li><input type="checkbox"> API authentication (JWT, OAuth)</li>
+                        <li><input type="checkbox"> Input validation on all endpoints</li>
+                        <li><input type="checkbox"> Error messages don't leak information</li>
+                      </ul>
+
+                      <h3>📱 General Best Practices</h3>
+                      <ul class="checklist-items">
+                        <li><input type="checkbox"> Dependencies regularly updated</li>
+                        <li><input type="checkbox"> Security monitoring enabled</li>
+                        <li><input type="checkbox"> Logging and audit trails</li>
+                        <li><input type="checkbox"> Regular security audits</li>
+                        <li><input type="checkbox"> Incident response plan</li>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <section id="conclusion" class="content-section">
+                    <h2>Conclusion</h2>
+
+                    <p>
+                      Web security is not a one-time setup—it's an ongoing process. As you've learned in this guide, securing your website involves multiple layers of protection:
+                    </p>
+
+                    <ul class="styled-list">
+                      <li><strong>HTTPS:</strong> Encrypts data in transit</li>
+                      <li><strong>Security Headers:</strong> Protect against common attacks</li>
+                      <li><strong>Secure Cookies:</strong> Safeguard user sessions</li>
+                      <li><strong>CORS:</strong> Control cross-origin access</li>
+                      <li><strong>XSS/CSRF Protection:</strong> Defend against injection attacks</li>
+                      <li><strong>Open Graph Security:</strong> Prevent social engineering</li>
+                    </ul>
+
+                    <div class="highlight-box success">
+                      <strong>🎯 Key Takeaways:</strong>
+                      <ul>
+                        <li>Security should be built in from the start, not added later</li>
+                        <li>Use free tools to test and monitor your security posture</li>
+                        <li>Keep dependencies and libraries up to date</li>
+                        <li>Follow the principle of least privilege</li>
+                        <li>Document your security practices</li>
+                        <li>Stay informed about new vulnerabilities</li>
+                      </ul>
+                    </div>
+
+                    <h3>Next Steps</h3>
+                    <p>
+                      Ready to secure your website? Here's what to do next:
+                    </p>
+
+                    <ol class="styled-list">
+                      <li>Run your site through Mozilla Observatory and Security Headers</li>
+                      <li>Implement the missing security headers</li>
+                      <li>Review and secure your cookies</li>
+                      <li>Set up CORS properly if you have an API</li>
+                      <li>Test for XSS and CSRF vulnerabilities</li>
+                      <li>Validate your Open Graph implementation</li>
+                      <li>Schedule regular security audits</li>
+                    </ol>
+
+                    <div class="cta-box">
+                      <h3>Need Help Securing Your Website?</h3>
+                      <p>
+                        Feel free to reach out if you have questions about implementing these security measures. Remember, a secure website protects both you and your users!
+                      </p>
+                      <a href="/contact" class="button primary">Get in Touch</a>
+                    </div>
+                  </section>
+
+                  <!-- Author Bio -->
+                  <section class="author-bio">
+                    <img src="https://ui-avatars.com/api/?name=Abhinav+Gyawali&size=100&background=6366f1&color=fff&bold=true" alt="Abhinav Gyawali" class="bio-avatar">
+                    <div class="bio-content">
+                      <h3>About the Author</h3>
+                      <h4>Abhinav Gyawali</h4>
+                      <p>
+                        Class 12 student and self-taught developer from Nepal. I learned software development using only free tools and now help other students start their coding journey. Currently building full-stack applications with Django and React.
+                      </p>
+                      <div class="social-links">
+                        <a href="https://github.com/abhinav-gyawali" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/abhinav-gyawali-4b136731a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+                        <a href="mailto:abhinav.gyawali07@gmail.com">Email</a>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- Comments Section -->
+                  <section class="comments-section">
+                    <h3>Share Your Thoughts</h3>
+                    <p>
+                      Have questions or want to share your own learning journey? Leave a comment below!
+                    </p>
+                    <div class="comment-form">
+                      <textarea placeholder="Write your comment here..." rows="5"></textarea>
+                      <button class="submit-btn">Post Comment</button>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>ABSTER</h3>
+            <p>
+              Transforming ideas into elegant digital experiences. Let's build something extraordinary together.
+            </p>
+            <div class="social-links">
+              <a href="https://github.com/Abhinav-Gyawali" target="_blank" class="social-icon">
+                <img src="/assets/icons/github.svg" alt="GitHub">
+              </a>
+              <a href="https://www.linkedin.com/in/abhinav-gyawali-4b136731a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon">
+                <img src="/assets/icons/linkedin.svg" alt="LinkedIn">
+              </a>
+              <a href="https://twitter.com" target="_blank" class="social-icon">
+                <img src="/assets/icons/twitter.svg" alt="Twitter">
+              </a>
+              <a href="mailto:agyawali78@gmail.com" class="social-icon">
+                <img src="/assets/icons/mail.svg" alt="Email">
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/"><img src="/assets/icons/home.svg" alt="" class="footer-icon">Home</a></li>
+              <li><a href="/about"><img src="/assets/icons/user.svg" alt="" class="footer-icon">About</a></li>
+              <li><a href="/projects"><img src="/assets/icons/folder.svg" alt="" class="footer-icon">Projects</a></li>
+              <li><a href="/contact"><img src="/assets/icons/mail.svg" alt="" class="footer-icon">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/blog"><img src="/assets/icons/book.svg" alt="" class="footer-icon">Blog</a></li>
+              <li><a href="/archives"><img src="/assets/icons/archive.svg" alt="" class="footer-icon">Archives</a></li>
+              <li><a href="/resume"><img src="/assets/icons/file-text.svg" alt="" class="footer-icon">Resume</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="mailto:agyawali78@gmail.com"><img src="/assets/icons/mail.svg" alt="" class="footer-icon">Email</a></li>
+              <li><a href="https://github.com/Abhinav-Gyawali"><img src="/assets/icons/github.svg" alt="" class="footer-icon">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/abhinav-gyawali-4b136731a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="/assets/icons/linkedin.svg" alt="" class="footer-icon">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 ABSTER. Crafted with passion.
+          </p>
+          <div class="footer-links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/sitemap">Sitemap</a>
+          </div>
+        </div>
+      </footer>
+
+      <script>
+        // Copy code functionality
+        function copyCode(button) {
+        const codeBlock = button.closest('.code-block').querySelector('code');
+        const text = codeBlock.textContent;
+
+        navigator.clipboard.writeText(text).then(() => {
+        button.textContent = 'Copied!';
+        setTimeout(() => {
+        button.textContent = 'Copy';
+        }, 2000);
+        });
+        }
+
+        // Smooth scroll for TOC
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        });
+
+        // Highlight active TOC item on scroll
+        window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('.content-section');
+        const tocLinks = document.querySelectorAll('.toc-list a');
+
+        let current = '';
+        sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 100) {
+        current = section.getAttribute('id');
+        }
+        });
+
+        tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+        }
+        });
+        });
+      </script>
+    </body>
+  </html>

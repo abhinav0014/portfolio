@@ -1,339 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Primary Meta Tags -->
-    <title>Blog - Thoughts on Technology, Design & Development | ABSTER</title>
-    <meta name="title" content="Blog - Thoughts on Technology, Design & Development">
-    <meta name="description" content="Read articles and insights on web development, design, programming tutorials, and technology trends by Abhinav Gyawali. Exploring modern frameworks, best practices, and developer tips.">
-    <meta name="keywords" content="Developer Blog, Web Development Articles, Programming Tutorials, React Tips, Django Tutorials, Python Programming, Tech Blog Nepal, Design Articles, Coding Best Practices">
-    <meta name="author" content="Abhinav Gyawali">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="blog">
-    <meta property="og:url" content="https://abhinav-gyawali.com.np/blog">
-    <meta property="og:title" content="Blog - Thoughts on Technology, Design & Development">
-    <meta property="og:description" content="Read articles and insights on web development, design, programming tutorials, and technology trends.">
-    <meta property="og:image" content="https://abhinav-gyawali.com.np/assets/images/blog-preview.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://abhinav-gyawali.com.np/blog">
-    <meta property="twitter:title" content="Blog - Thoughts on Technology, Design & Development">
-    <meta property="twitter:description" content="Read articles and insights on web development, design, programming tutorials, and technology trends.">
-    <meta property="twitter:image" content="https://abhinav-gyawali.com.np/assets/images/blog-preview.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://abhinav-gyawali.com.np/blog">
-    
-    <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title="ABSTER Blog RSS Feed" href="https://abhinav-gyawali.com.np/feed.xml">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/style.css">
-    
-    <!-- Schema.org Markup -->
-    <script type="application/ld+json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>Blog - Thoughts on Technology, Design & Development | ABSTER</title>
+  <meta name="title" content="Blog - Thoughts on Technology, Design & Development">
+  <meta name="description" content="Read articles and insights on web development, design, programming tutorials, and technology trends by Abhinav Gyawali. Exploring modern frameworks, best practices, and developer tips.">
+  <meta name="keywords" content="Developer Blog, Web Development Articles, Programming Tutorials, React Tips, Django Tutorials, Python Programming, Tech Blog Nepal, Design Articles, Coding Best Practices">
+  <meta name="author" content="Abhinav Gyawali">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="blog">
+  <meta property="og:url" content="https://abhinav-gyawali.com.np/blog">
+  <meta property="og:title" content="Blog - Thoughts on Technology, Design & Development">
+  <meta property="og:description" content="Read articles and insights on web development, design, programming tutorials, and technology trends.">
+  <meta property="og:image" content="https://abhinav-gyawali.com.np/assets/images/blog-preview.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://abhinav-gyawali.com.np/blog">
+  <meta property="twitter:title" content="Blog - Thoughts on Technology, Design & Development">
+  <meta property="twitter:description" content="Read articles and insights on web development, design, programming tutorials, and technology trends.">
+  <meta property="twitter:image" content="https://abhinav-gyawali.com.np/assets/images/blog-preview.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://abhinav-gyawali.com.np/blog">
+
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title="ABSTER Blog RSS Feed" href="https://abhinav-gyawali.com.np/feed.xml">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "ABSTER Blog",
-      "description": "Articles and insights on technology, design, and development",
-      "url": "https://abhinav-gyawali.com.np/blog",
-      "author": {
-        "@type": "Person",
-        "name": "Abhinav Gyawali"
-      }
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "ABSTER Blog",
+    "description": "Articles and insights on technology, design, and development",
+    "url": "https://abhinav-gyawali.com.np/blog",
+    "author": {
+    "@type": "Person",
+    "name": "Abhinav Gyawali"
     }
-    </script>
-    
-    <!-- Scripts -->
-    <script src="/js/script.js" defer></script>
+    }
+  </script>
+
+  <!-- Scripts -->
+  <script src="/js/script.js" defer></script>
 </head>
 <body>
-    <div class="bg-animation"></div>
-    <div class="grid-overlay"></div>
+  <div class="bg-animation"></div>
+  <div class="grid-overlay"></div>
 
-    <nav>
-        <a href="/" class="logo">
-            <div class="logo-icon">AB</div>
-            <span>ABSTER</span>
-        </a>
-        
-        <input type="checkbox" id="hamburger">
-        <label for="hamburger" class="hamburger">
-            <img src="/assets/icons/menu.svg" alt="Menu" style="width: 24px; height: 24px;">
-        </label>
-        
-        <ul class="nav-links">
-            <li><a href="/"><img src="/assets/icons/home.svg" alt="" class="nav-icon">Home</a></li>
-            <li><a href="/about"><img src="/assets/icons/user.svg" alt="" class="nav-icon">About</a></li>
-            <li><a href="/projects"><img src="/assets/icons/folder.svg" alt="" class="nav-icon">Projects</a></li>
-            <li><a href="/contact"><img src="/assets/icons/mail.svg" alt="" class="nav-icon">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section class="page-hero">
-            <div class="container">
-                <div class="badge">Blog & Insights</div>
-                <h1 class="page-title">Thoughts & Ideas</h1>
-                <p class="page-subtitle">Exploring technology, design, and development</p>
-            </div>
-        </section>
-
-        <section class="blog-section">
-            <div class="container">
-                <!-- Search and Filter -->
-                <div class="blog-header">
-                    <div class="search-box">
-                        <img src="/assets/icons/search.svg" alt="" class="search-icon">
-                        <input type="text" placeholder="Search articles...">
-                    </div>
-                    <div class="blog-categories">
-                        <button class="category-btn active" data-category="all">All</button>
-                        <button class="category-btn" data-category="web">Web Dev</button>
-                        <button class="category-btn" data-category="design">Design</button>
-                        <button class="category-btn" data-category="tutorial">Tutorial</button>
-                    </div>
-                </div>
-
-                <!-- Featured Post -->
-                <div class="featured-post">
-                    <div class="featured-image">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=600&fit=crop" alt="Featured">
-                        <div class="featured-badge">Featured</div>
-                    </div>
-                    <div class="featured-content">
-                        <div class="post-meta">
-                            <span class="post-category">
-                                <img src="/assets/icons/tag.svg" alt="">
-                                Web Development
-                            </span>
-                            <span class="post-date">
-                                <img src="/assets/icons/calendar.svg" alt="">
-                                Dec 15, 2024
-                            </span>
-                            <span class="post-time">
-                                <img src="/assets/icons/clock.svg" alt="">
-                                8 min read
-                            </span>
-                        </div>
-                        <h2>Building Scalable Web Applications with Modern Architecture</h2>
-                        <p>Explore best practices for creating maintainable and scalable web applications using modern frameworks and design patterns.</p>
-                        <a href="#" class="read-more">
-                            Read Article
-                            <img src="/assets/icons/arrow-right.svg" alt="">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Blog Grid -->
-                <div class="blog-grid" id="blogGrid"></div>
-                <script>
-let allPosts = [];
-
-fetch("blogs.json")
-  .then(res => res.json())
-  .then(data => {
-    allPosts = data.posts;
-
-    renderFeatured();
-    renderGrid(allPosts);
-    setupFilters();
-    setupSearch();
-  });
-
-function renderFeatured() {
-  const featured = allPosts.find(p => p.featured);
-  if (!featured) return;
-
-  document.querySelector(".featured-image img").src = featured.coverImage;
-  document.querySelector(".featured-content h2").textContent = featured.title;
-  document.querySelector(".featured-content p").textContent = featured.excerpt;
-  document.querySelector(".featured-content .read-more").href = featured.contentUrl;
-
-  document.querySelector(".post-category").innerHTML = `
-    <img src="/assets/icons/tag.svg" alt="">
-    ${featured.categoryLabel}
-  `;
-
-  document.querySelector(".post-date").innerHTML = `
-    <img src="/assets/icons/calendar.svg" alt="">
-    ${formatDate(featured.publishedAt)}
-  `;
-
-  document.querySelector(".post-time").innerHTML = `
-    <img src="/assets/icons/clock.svg" alt="">
-    ${featured.readTime} min read
-  `;
-}
-
-function renderGrid(posts) {
-  const grid = document.getElementById("blogGrid");
-
-  grid.innerHTML = posts.map(post => `
-    <article class="blog-card" data-category="${post.category}">
-      <div class="blog-image">
-        <img src="${post.thumbnail}" alt="${post.title}">
-        <div class="blog-overlay"></div>
+  <nav>
+    <a href="/" class="logo">
+      <div class="logo-icon">
+        AB
       </div>
+      <span>ABSTER</span>
+    </a>
 
-      <div class="blog-content">
-        <div class="post-meta">
-          <span class="post-category">
-            <img src="/assets/icons/tag.svg" alt="">
-            ${post.categoryLabel}
-          </span>
-          <span class="post-date">
-            <img src="/assets/icons/calendar.svg" alt="">
-            ${formatDate(post.publishedAt)}
-          </span>
+    <input type="checkbox" id="hamburger">
+    <label for="hamburger" class="hamburger">
+      <img src="/assets/icons/menu.svg" alt="Menu" style="width: 24px; height: 24px;">
+    </label>
+
+    <ul class="nav-links">
+      <li><a href="/"><img src="/assets/icons/home.svg" alt="" class="nav-icon">Home</a></li>
+      <li><a href="/about"><img src="/assets/icons/user.svg" alt="" class="nav-icon">About</a></li>
+      <li><a href="/projects"><img src="/assets/icons/folder.svg" alt="" class="nav-icon">Projects</a></li>
+      <li><a href="/contact"><img src="/assets/icons/mail.svg" alt="" class="nav-icon">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="badge">
+          Blog & Insights
+        </div>
+        <h1 class="page-title">Thoughts & Ideas</h1>
+        <p class="page-subtitle">
+          Exploring technology, design, and development
+        </p>
+      </div>
+    </section>
+
+    <section class="blog-section">
+      <div class="container">
+        <!-- Search and Filter -->
+        <div class="blog-header">
+          <div class="search-box">
+            <img src="/assets/icons/search.svg" alt="" class="search-icon">
+            <input type="text" placeholder="Search articles...">
+          </div>
+          <div class="blog-categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="web">Web Dev</button>
+            <button class="category-btn" data-category="design">Design</button>
+            <button class="category-btn" data-category="tutorial">Tutorial</button>
+          </div>
         </div>
 
-        <h3>${post.title}</h3>
-        <p>${post.excerpt}</p>
 
-        <div class="blog-footer">
+        <!-- Blog Grid -->
+        <div class="blog-grid" id="blogGrid"></div>
+        <script>
+          let allPosts = [];
+
+          fetch("blogs.json")
+          .then(res => res.json())
+          .then(data => {
+          allPosts = data.posts;
+
+          //renderFeatured();
+          renderGrid(allPosts);
+          setupFilters();
+          setupSearch();
+          });
+
+          function renderFeatured() {
+          const featured = allPosts.find(p => p.featured);
+          if (!featured) return;
+
+          document.querySelector(".featured-image img").src = featured.coverImage;
+          document.querySelector(".featured-content h2").textContent = featured.title;
+          document.querySelector(".featured-content p").textContent = featured.excerpt;
+          document.querySelector(".featured-content .read-more").href = featured.contentUrl;
+
+          document.querySelector(".post-category").innerHTML = `
+          <img src="/assets/icons/tag.svg" alt="">
+          ${featured.categoryLabel}
+          `;
+
+          document.querySelector(".post-date").innerHTML = `
+          <img src="/assets/icons/calendar.svg" alt="">
+          ${formatDate(featured.publishedAt)}
+          `;
+
+          document.querySelector(".post-time").innerHTML = `
+          <img src="/assets/icons/clock.svg" alt="">
+          ${featured.readTime} min read
+          `;
+          }
+
+          function renderGrid(posts) {
+          const grid = document.getElementById("blogGrid");
+
+          grid.innerHTML = posts.map(post => `
+          <article class="blog-card" data-category="${post.category}">
+          <div class="blog-image">
+          <img src="${post.thumbnail}" alt="${post.title}">
+          <div class="blog-overlay"></div>
+          </div>
+
+          <div class="blog-content">
+          <div class="post-meta">
+          <span class="post-category">
+          <img src="/assets/icons/tag.svg" alt="">
+          ${post.categoryLabel}
+          </span>
+          <span class="post-date">
+          <img src="/assets/icons/calendar.svg" alt="">
+          ${formatDate(post.publishedAt)}
+          </span>
+          </div>
+
+          <h3>${post.title}</h3>
+          <p>${post.excerpt}</p>
+
+          <div class="blog-footer">
           <div class="author">
-            <img src="${post.author.avatar}" class="author-avatar">
-            <span>${post.author.name}</span>
+          <img src="${post.author.avatar}" class="author-avatar">
+          <span>${post.author.name}</span>
           </div>
           <a href="${post.contentUrl}" class="read-link">
-            <img src="/assets/icons/arrow-right.svg" alt="">
+          <img src="/assets/icons/arrow-right.svg" alt="">
+          </a>
+          </div>
+          </div>
+          </article>
+          `).join("");
+          }
+
+          function setupFilters() {
+          document.querySelectorAll(".category-btn").forEach(btn => {
+          btn.addEventListener("click", () => {
+          document.querySelector(".category-btn.active")?.classList.remove("active");
+          btn.classList.add("active");
+
+          const cat = btn.dataset.category;
+          renderGrid(cat === "all"
+          ? allPosts: allPosts.filter(p => p.category === cat)
+          );
+          });
+          });
+          }
+
+          function setupSearch() {
+          const input = document.querySelector(".search-box input");
+
+          input.addEventListener("input", e => {
+          const q = e.target.value.toLowerCase();
+
+          const results = allPosts.filter(p =>
+          p.title.toLowerCase().includes(q) ||
+          p.excerpt.toLowerCase().includes(q) ||
+          p.tags.join(" ").toLowerCase().includes(q)
+          );
+
+          renderGrid(results);
+          });
+          }
+
+          function formatDate(date) {
+          return new Date(date).toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+          year: "numeric"
+          });
+          }
+        </script>
+
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+          <div class="newsletter-content">
+            <img src="/assets/icons/mail.svg" alt="" class="newsletter-icon">
+            <h2>Subscribe to Newsletter</h2>
+            <p>
+              Get the latest articles and insights delivered to your inbox weekly
+            </p>
+          </div>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="button primary">
+              Subscribe
+              <img src="/assets/icons/send.svg" alt="">
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>ABSTER</h3>
+        <p>
+          Transforming ideas into elegant digital experiences. Let's build something extraordinary together.
+        </p>
+        <div class="social-links">
+          <a href="https://github.com" target="_blank" class="social-icon">
+            <img src="/assets/icons/github.svg" alt="GitHub">
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="social-icon">
+            <img src="/assets/icons/linkedin.svg" alt="LinkedIn">
+          </a>
+          <a href="https://twitter.com" target="_blank" class="social-icon">
+            <img src="/assets/icons/twitter.svg" alt="Twitter">
+          </a>
+          <a href="mailto:hello@abhister.com" class="social-icon">
+            <img src="/assets/icons/mail.svg" alt="Email">
           </a>
         </div>
       </div>
-    </article>
-  `).join("");
-}
 
-function setupFilters() {
-  document.querySelectorAll(".category-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelector(".category-btn.active")?.classList.remove("active");
-      btn.classList.add("active");
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/"><img src="/assets/icons/home.svg" alt="" class="footer-icon">Home</a></li>
+          <li><a href="/about"><img src="/assets/icons/user.svg" alt="" class="footer-icon">About</a></li>
+          <li><a href="/projects"><img src="/assets/icons/folder.svg" alt="" class="footer-icon">Projects</a></li>
+          <li><a href="/contact"><img src="/assets/icons/mail.svg" alt="" class="footer-icon">Contact</a></li>
+        </ul>
+      </div>
 
-      const cat = btn.dataset.category;
-      renderGrid(cat === "all"
-        ? allPosts
-        : allPosts.filter(p => p.category === cat)
-      );
-    });
-  });
-}
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/blog"><img src="/assets/icons/book.svg" alt="" class="footer-icon">Blog</a></li>
+          <li><a href="/archives"><img src="/assets/icons/archive.svg" alt="" class="footer-icon">Archives</a></li>
+          <li><a href="/resume"><img src="/assets/icons/file-text.svg" alt="" class="footer-icon">Resume</a></li>
+        </ul>
+      </div>
 
-function setupSearch() {
-  const input = document.querySelector(".search-box input");
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:hello@abhister.com"><img src="/assets/icons/mail.svg" alt="" class="footer-icon">Email</a></li>
+          <li><a href="https://github.com"><img src="/assets/icons/github.svg" alt="" class="footer-icon">GitHub</a></li>
+          <li><a href="https://linkedin.com"><img src="/assets/icons/linkedin.svg" alt="" class="footer-icon">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
 
-  input.addEventListener("input", e => {
-    const q = e.target.value.toLowerCase();
-
-    const results = allPosts.filter(p =>
-      p.title.toLowerCase().includes(q) ||
-      p.excerpt.toLowerCase().includes(q) ||
-      p.tags.join(" ").toLowerCase().includes(q)
-    );
-
-    renderGrid(results);
-  });
-}
-
-function formatDate(date) {
-  return new Date(date).toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric"
-  });
-}
-</script>
-
-                <!-- Newsletter Section -->
-                <div class="newsletter-section">
-                    <div class="newsletter-content">
-                        <img src="/assets/icons/mail.svg" alt="" class="newsletter-icon">
-                        <h2>Subscribe to Newsletter</h2>
-                        <p>Get the latest articles and insights delivered to your inbox weekly</p>
-                    </div>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit" class="button primary">
-                            Subscribe
-                            <img src="/assets/icons/send.svg" alt="">
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h3>ABSTER</h3>
-                <p>Transforming ideas into elegant digital experiences. Let's build something extraordinary together.</p>
-                <div class="social-links">
-                    <a href="https://github.com" target="_blank" class="social-icon">
-                        <img src="/assets/icons/github.svg" alt="GitHub">
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" class="social-icon">
-                        <img src="/assets/icons/linkedin.svg" alt="LinkedIn">
-                    </a>
-                    <a href="https://twitter.com" target="_blank" class="social-icon">
-                        <img src="/assets/icons/twitter.svg" alt="Twitter">
-                    </a>
-                    <a href="mailto:hello@abhister.com" class="social-icon">
-                        <img src="/assets/icons/mail.svg" alt="Email">
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="/"><img src="/assets/icons/home.svg" alt="" class="footer-icon">Home</a></li>
-                    <li><a href="/about"><img src="/assets/icons/user.svg" alt="" class="footer-icon">About</a></li>
-                    <li><a href="/projects"><img src="/assets/icons/folder.svg" alt="" class="footer-icon">Projects</a></li>
-                    <li><a href="/contact"><img src="/assets/icons/mail.svg" alt="" class="footer-icon">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="/blog"><img src="/assets/icons/book.svg" alt="" class="footer-icon">Blog</a></li>
-                    <li><a href="/archives"><img src="/assets/icons/archive.svg" alt="" class="footer-icon">Archives</a></li>
-                    <li><a href="/resume"><img src="/assets/icons/file-text.svg" alt="" class="footer-icon">Resume</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="mailto:hello@abhister.com"><img src="/assets/icons/mail.svg" alt="" class="footer-icon">Email</a></li>
-                    <li><a href="https://github.com"><img src="/assets/icons/github.svg" alt="" class="footer-icon">GitHub</a></li>
-                    <li><a href="https://linkedin.com"><img src="/assets/icons/linkedin.svg" alt="" class="footer-icon">LinkedIn</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2024 ABSTER. Crafted with passion.</p>
-            <div class="footer-links">
-                <a href="/privacy">Privacy</a>
-                <a href="/terms">Terms</a>
-                <a href="/sitemap">Sitemap</a>
-            </div>
-        </div>
-    </footer>
+    <div class="footer-bottom">
+      <p>
+        &copy; 2024 ABSTER. Crafted with passion.
+      </p>
+      <div class="footer-links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/sitemap">Sitemap</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
